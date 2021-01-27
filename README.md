@@ -28,8 +28,9 @@ Report bugs, request new features or ask questions by [creatin an issue](https:/
 
 Contributions of all sizes are welcome. Please review our [contribution guidelines]() to get started. You can also help by [reporting bugs](https://github.com/LeanderGangso/pyMyShareAPI/issues/new/choose).
 
+<!---
 ## License - main points
-
 - When distributing derived works, the source code of the work must be made available under the same license.
 - All modification's has to have the same license and be open source.
-- You do not need to release you modified code, but we would really apreacheate it you did do a [pull request](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/) with you changes.
+- You do not need to release you modified code, but we would really apreacheate it you did do a [pull request](https://www.freecodecamp.org/news/how-to-make-your-        first-pull-request-on-github-3/) with you changes.
+--->
