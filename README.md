@@ -16,15 +16,13 @@ More info to come...
 
 ## Documentation
 
-- [PMA Wiki](https://github.com/LeanderGangso/pyMyShareAPI/wiki)
+- Thake a look at our [PMA Wiki](https://github.com/LeanderGangso/pyMyShareAPI/wiki).
 
-- [MyShare API](https://api.myshare.today)
+- The origional [MyShare API](https://api.myshare.today) documentation.
 
 ## Getting help
 
-You can help in any of the ways bellow:
-
-1. Report bugs, request new features or ask questions by [creatin an issue](https://github.com/LeanderGangso/pyMyShareAPI/issues/new/choose) or [a discussion](https://github.com/LeanderGangso/pyMyShareAPI/discussions/new).
+Report bugs, request new features or ask questions by [creatin an issue](https://github.com/LeanderGangso/pyMyShareAPI/issues/new/choose) or [a discussion](https://github.com/LeanderGangso/pyMyShareAPI/discussions/new).
 
 ## Contributing
 
