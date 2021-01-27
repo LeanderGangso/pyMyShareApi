@@ -1,8 +1,8 @@
 # pyMyShareAPI
 
 ## important!
-We do not have access to the API at this point, as the API itself is not yet launched.  
-We will be updating this repo as soon as the situation changes!
+**We do not have access to the API at this point, as the API itself is not yet launched.  
+We will be updating this repo as soon as the situation changes!**
 
 We have made the MyShare API easy to use.  
 [![Python 3](https://img.shields.io/badge/Python3-white?logo=python)](#pyMyShareAPI)
