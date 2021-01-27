@@ -6,12 +6,12 @@ def read(filename):
     with open(filename, encoding='utf-8') as file:
         return file.read()
 
- with open('pma/version.py', 'r', encoding='utf-8') as f:
+with open('pyMyShareAPI/version.py', 'r', encoding='utf-8') as f:
     version = re.search(r"^__version__\s*=\s*'(.*)'.*$", f.read(), flags=re.MULTILINE).group(1)
 
 setup(name='pyMyShareAPI',
         version=version,
-        description='Python MyShare API wrapper',
+        description='Easy MyShare SDK for Python',
         long_description=read('README.md'),
         long_description_content_type='text/markdown',
         author='LeanderGangso',
