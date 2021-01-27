@@ -16,20 +16,21 @@ More info to come...
 
 ## Documentation
 
-- [PMA Wiki](https://github.com/LeanderGangso/pyMyShareAPI/wiki)
+- Thake a look at our [PMA Wiki](https://github.com/LeanderGangso/pyMyShareAPI/wiki).
 
-- [MyShare API](https://api.myshare.today)
+- The origional [MyShare API](https://api.myshare.today) documentation.
 
 ## Getting help
 
-You can help in any of the ways bellow:
-
-1. Report bugs, request new features or ask questions by [creatin an issue](https://github.com/LeanderGangso/pyMyShareAPI/issues/new/choose) or [a discussion](https://github.com/LeanderGangso/pyMyShareAPI/discussions/new).
+Report bugs, request new features or ask questions by [creatin an issue](https://github.com/LeanderGangso/pyMyShareAPI/issues/new/choose) or [a discussion](https://github.com/LeanderGangso/pyMyShareAPI/discussions/new).
 
 ## Contributing
 
 Contributions of all sizes are welcome. Please review our [contribution guidelines]() to get started. You can also help by [reporting bugs](https://github.com/LeanderGangso/pyMyShareAPI/issues/new/choose).
 
-## License
-
-The GNU GPL is the most widely used free software license and has a strong copyleft requirement. When distributing derived works, the source code of the work must be made available under the same license.
+<!---
+## License - main points
+- When distributing derived works, the source code of the work must be made available under the same license.
+- All modification's has to have the same license and be open source.
+- You do not need to release you modified code, but we would really apreacheate it you did do a [pull request](https://www.freecodecamp.org/news/how-to-make-your-        first-pull-request-on-github-3/) with you changes.
+--->
