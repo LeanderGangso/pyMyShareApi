@@ -10,7 +10,9 @@ We have made the MyShare API easy to use.
 We are currently waiting on MyShare API to launch.  
 This project will start as soon as we have access to the newly created API.
 
-## 
+## Setup and Usage
+
+More info to come...
 
 ## Documentation
 
