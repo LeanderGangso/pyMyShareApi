@@ -22,7 +22,7 @@ More info to come...
 
 - Thake a look at our [PMA Wiki](https://github.com/LeanderGangso/pyMyShareAPI/wiki).
 
-- The origional [MyShare API](https://api.myshare.today) documentation.
+- The origional [MyShare API](https://api.myshare.today).
 
 ## Getting help
 
