@@ -21,7 +21,7 @@ We have made the MyShare API easy to use.
 - [Getting started](#getting-started)
   - [Example setup](#example-setup)
   - [Documentation](#documentation)
-  - [Getting help](#getting-help)
+- [Getting help](#getting-help)
 - [Contributing](#contributing)
 - [License - key points](#license---key-points)
 
@@ -40,27 +40,69 @@ We are currently supporting the following methods:
 
 ## Installing
 
-More info to come...
+With PIP (recommended):
+
+```bash
+pip install pymyshareapi
+```
+
+With git-clone:
+
+```bash
+git clone https://github.com/LeanderGangso/pyMyShareAPI
+cd pyMyShareAPI
+python setup.py install
+```
 
 ## Getting started
 
-More info to come...
+Our Wiki contains a lot of resources to get you started with `pyMyShareAPI`:
 
-## Example's
+- [Introduction to the API](#edit-me)
+- [Make your first call](#edit-me)
+- Go to [documentation](#documentation) to see the official documentations.
 
-We believe that the best way to learn this package is to learn by seeing. We have some examples that you can look at and use as your starting point.
+### Example's
 
-For our more examples, visit [this page](https://github.com/leandergangso/pymyshareapi/examples/) and discover our official examples.
+We believe that the best way to learn this package is to learn by seeing. We have some examples that you can look at and use as your template for you new project.  
 
-## Documentation
+Starting template with environment variables:
 
-- Thake a look at our [PMA Wiki](https://github.com/LeanderGangso/pyMyShareAPI/wiki).
+```python
+import pymyshareapi
+import os
 
-- The origional [MyShare API](https://api.myshare.today).
+# get TOKEN from environment
+TOKEN = os.environ('TOKEN')
+
+# create an instance
+pma = pymyshareapi.PMA(token=TOKEN)
+
+# make a call :return dict
+pma.create_job(name, start_date, end_date, hours)
+```
+
+For more, visit [this page](https://github.com/leandergangso/pymyshareapi/examples/) and discover our official examples.
+
+### Documentation
+
+- Thake a look at our official [Wiki page](https://github.com/LeanderGangso/pyMyShareAPI/wiki).
+
+- Or visit the origional [MyShare API](https://api.myshare.today) documentation.  
+
+> All our methods have the same name's as the origional API, but with **snake_casing** instead.
 
 ## Getting help
 
-Report bugs, request new features or ask questions by [creatin an issue](https://github.com/LeanderGangso/pyMyShareAPI/issues/new/choose) or [a discussion](https://github.com/LeanderGangso/pyMyShareAPI/discussions/new).
+You can get help in serveral ways:
+
+- We have a [telegram group](t.me/pyMyShareAPI) that you can join and ask any questions.
+
+- Report bugs, request features or ask questions by [creatin an issue](https://github.com/LeanderGangso/pyMyShareAPI/issues/new/choose) or [a discussion](https://github.com/LeanderGangso/pyMyShareAPI/discussions/new).
+
+- Our [Wiki pages](https://github.com/LeanderGangso/pyMyShareAPI/wiki) has the information you need.  
+
+> You could always help us improve by adding the missing information to the wiki.
 
 ## Contributing
 
