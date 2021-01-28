@@ -9,7 +9,7 @@ We have made the MyShare API easy to use.
 [![Open source](https://img.shields.io/badge/Open_Source-white?logo=GitHub-Sponsors&logoColor=red)](#pyMyShareAPI)  
 [![PyPi](https://img.shields.io/pypi/v/pymyshareapi.svg?logo=pypi&label=PyPi&labelColor=white)](https://pypi.org/project/pymyshareapi/)
 [![Python versions](https://img.shields.io/pypi/pyversions/pymyshareapi.svg?label=Python&logo=python&labelColor=white)](https://pypi.org/project/pymyshareapi/)
-[![Downloads](https://pypistats.org/packages/pytelegrambotapi?logo=&logoColor=red&labelColor=white)](https://pypistats.org/packages/python-telegram-bot)
+[![Downloads](https://img.shields.io/pypi/dm/pymyshareapi?labelColor=white&logo=pypi&label=Downloads)](https://pypistats.org/packages/pymyshareapi)
 [![License](https://img.shields.io/pypi/l/python-telegram-bot.svg?logo=license&logoColor=red&labelColor=white)](#edit-me)
 
 ## Table on contents
