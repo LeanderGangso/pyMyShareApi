@@ -5,13 +5,13 @@ We do not have access to the API at this point, as the API itself is not yet lau
 We will be updating this repo as soon as the situation changes!**
 
 We have made the MyShare API easy to use.  
-[![Python 3](https://img.shields.io/badge/Python3-white?logo=python)](#pyMyShareAPI)
 [![MyShare](https://img.shields.io/badge/MyShare-white?logo=data:image/svg%2bxml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1NSA1NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGc+Cjxwb2x5Z29uIGNsYXNzPSIiIHBvaW50cz0iNTMuNjY4IDIyLjM3NCAzNC44NjggMjIuMjc0IDQxLjg2OCAzLjM3NDIgMzAuNDY4IDMuMjc0MiAyMy40NjggMjIuMTc0IDQuNjY4NSAyMi4wNzQgMC44Njg0NSAzMS44NzQgMTkuNzY4IDMxLjk3NCAxMi43NjggNTAuODc0IDI0LjE2OCA1MC45NzQgMzEuMTY4IDMyLjA3NCA0OS45NjggMzIuMTc0IiBmaWxsPSIjOEFCQThCIi8+Cjxwb2x5Z29uIGNsYXNzPSIiIHBvaW50cz0iNTMuNjY4IDIyLjM3NCAzNC44NjggMjIuMjc0IDQxLjg2OCAzLjM3NDIgMzAuNDY4IDMuMjc0MiAyMy40NjggMjIuMTc0IDE5Ljc2OCAzMS45NzQgMzEuMTY4IDMyLjA3NCA0OS45NjggMzIuMTc0IiBmaWxsPSIjM0UzRTNFIi8+CjwvZz4KPC9zdmc+Cg==)](#pyMyShareAPI)
 [![Open source](https://img.shields.io/badge/Open_Source-white?logo=GitHub-Sponsors&logoColor=red)](#pyMyShareAPI)  
-[![PyPi](https://img.shields.io/badge/name-value-white?logo=GitHub-Sponsors&logoColor=red)](#pyMyShareAPI)
-[![Downloads](https://img.shields.io/badge/name-value-white?logo=GitHub-Sponsors&logoColor=red)](#pyMyShareAPI)
-[![License](https://img.shields.io/badge/name-value-white?logo=GitHub-Sponsors&logoColor=red)](#pyMyShareAPI)
-[![Issue resolution](https://img.shields.io/badge/name-value-white?logo=GitHub-Sponsors&logoColor=red)](#pyMyShareAPI)
+[![PyPi](https://img.shields.io/pypi/v/pymyshareapi.svg?logo=pypi&label=PyPi&labelColor=white)]()
+[![Python versions](https://img.shields.io/pypi/pyversions/pymyshareapi.svg?label=Python&logo=python&labelColor=white)]()
+[![Downloads](https://pypistats.org/packages/pytelegrambotapi?logo=GitHub-Sponsors&logoColor=red&labelColor=white))]()
+[![License](https://img.shields.io/badge/name-value-white?logo=GitHub-Sponsors&logoColor=red&labelColor=white))]()
+[![GitHub issues](https://img.shields.io/github/issues-raw/leandergangso/pymyshareapi?label=Open%20Issues&logo=github&labelColor=white&logoColor=black)]()
 
 ## Table on contents
 
@@ -61,9 +61,11 @@ Contributions of all sizes are welcome. Please review our [contribution guidelin
 
 ## License - key points
 
+To be determined...
 <!---
 - When distributing derived works, the source code of the work must be made available under the same license.
 - All modification's has to have the same license and be open source.
 - You do not need to release you modified code, but we would really apreacheate it you did do a [pull request](https://www.freecodecamp.org/news/how-to-make-your-        first-pull-request-on-github-3/) with you changes.
-Disclaimer: I am not a lawyer, so any and all information given is strictly based on my understanding and may or may not be correct.
 --->
+
+Disclaimer: I am not a lawyer, so any and all information given is strictly based on my understanding and may or may not be correct.
