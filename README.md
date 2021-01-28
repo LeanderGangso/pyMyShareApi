@@ -19,8 +19,9 @@ We have made the MyShare API easy to use.
 - [API support](#api-support)
 - [Installing](#installing)
 - [Getting started](#getting-started)
-- [Documentation](#documentation)
-- [Getting help](#getting-help)
+  - [Example setup](#example-setup)
+  - [Documentation](#documentation)
+  - [Getting help](#getting-help)
 - [Contributing](#contributing)
 - [License - key points](#license---key-points)
 
@@ -44,6 +45,12 @@ More info to come...
 ## Getting started
 
 More info to come...
+
+## Example's
+
+We believe that the best way to learn this package is to learn by seeing. We have some examples that you can look at and use as your starting point.
+
+For our more examples, visit [this page](https://github.com/leandergangso/pymyshareapi/examples/) and discover our official examples.
 
 ## Documentation
 
