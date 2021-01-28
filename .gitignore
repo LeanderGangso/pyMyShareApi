@@ -1,4 +1,10 @@
+# general
 __pycache__
 .env
 *.log
 *.txt
+
+# pypi packaging
+build/
+dist/
+pyMyShareAPI.egg-info
