@@ -82,15 +82,16 @@ For more, visit [this page](https://github.com/leandergangso/pyMyShareSDK/exampl
 
 ### Documentation
 
-- Thake a look at our official [Wiki page](https://github.com/LeanderGangso/pyMyShareSDK/wiki).
+- Thake a look at our [Wiki pages](https://github.com/LeanderGangso/pyMyShareSDK/wiki).
 
-- Or visit the origional [MyShare API](https://api.myshare.today) documentation.  
+- Visit the [MyShare API](https://api.myshare.today) documentation.  
 
-> All our methods have the same name's as the origional API, but with **snake_casing** instead.
+> All our methods have the same name's as the API, but with **snake_casing** instead.  
+  E.g. updateJob() = update_job()
 
 ## Getting help
 
-You can get help in serveral ways:
+You can get help in the following ways:
 
 - We have a [telegram group](t.me/pyMyShareSDK) that you can join and ask any questions.
 
@@ -98,11 +99,12 @@ You can get help in serveral ways:
 
 - Our [Wiki pages](https://github.com/LeanderGangso/pyMyShareSDK/wiki) has the information you need.  
 
-> You could always help us improve by adding the missing information to the wiki.
+> You could always help us improve by adding missing information to the wiki.
 
 ## Contributing
 
-Contributions of all sizes are welcome. Please review our [contribution guidelines](https://github.com/LeanderGangso/pyMyShareSDK/blob/master/CODE_OF_CONDUCT.md) to get started. You can also help by [reporting bugs](https://github.com/LeanderGangso/pyMyShareSDK/issues/new/choose).
+Contributions of all sizes are welcome. Please review our [contribution guidelines](https://github.com/LeanderGangso/pyMyShareSDK/blob/master/CODE_OF_CONDUCT.md) to get started.  
+You can also help by [reporting bugs](https://github.com/LeanderGangso/pyMyShareSDK/issues/new/choose) or making a [pull request](https://www.freecodecamp.org/news/how-to-make-your-        first-pull-request-on-github-3/).
 
 ## License - key points
 
@@ -118,6 +120,6 @@ Disclaimer: I am not a lawyer, so any and all information given is strictly base
 ## API support
 
 ⏳ [MyShare API 1.0](#link-to-release-notes)
-
+<!--
 - ✔  [MyShare API ...](#link-to-release-notes)
 - ❌ [MyShare API ...](#link-to-release-notes)
