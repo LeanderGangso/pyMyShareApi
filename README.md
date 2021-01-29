@@ -31,6 +31,8 @@ PMS supports all of the mentioned Python versions in the tag above.
 Along with the initial API implementation, this library contains clever solutions  
 to help you write even less code and easily combine multiple functions together.
 
+> You will need a TOKEN from MyShare API in order for this library to function.
+
 ## Documentation
 
 - Thake a look at our [Wiki pages](https://github.com/LeanderGangso/pyMyShareSDK/wiki), here you will find all you need to start integration PMS into your project.
