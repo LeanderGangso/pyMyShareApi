@@ -46,7 +46,7 @@ to help you write even less code and easily combine multiple functions together.
 
 You can get help in the following ways:
 
-- We have a [telegram group](t.me/pyMyShareSDK) that you can join and ask any questions.
+- We have a [telegram group](https://t.me/pyMyShareSDK) that you can join and ask any questions.
 
 - Report bugs, request features or ask questions by [creatin an issue](https://github.com/LeanderGangso/pyMyShareSDK/issues/new/choose) or [a discussion](https://github.com/LeanderGangso/pyMyShareSDK/discussions/new).
 
