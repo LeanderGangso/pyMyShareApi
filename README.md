@@ -17,10 +17,7 @@ Let us deal with setting up the correct API requests, so you don't have to.
 ## Table on contents
 
 - [Introduction](#introduction)
-- [Installing](#installing)
-- [Getting started](#getting-started)
-  - [Example's](#examples)
-  - [Documentation](#documentation)
+- [Documentation](#documentation)
 - [Getting help](#getting-help)
 - [Contributing](#contributing)
 - [License](#license---key-points)
@@ -34,60 +31,14 @@ PMS supports all of the mentioned Python versions in the tag above.
 Along with the initial API implementation, this library contains clever solutions  
 to help you write even less code and easily combine multiple functions together.
 
-## Installing
-
-With PIP (recommended):
-
-```bash
-pip install pymysharesdk
-```
-
-With git-clone:
-
-```bash
-git clone https://github.com/LeanderGangso/pyMyShareSDK
-cd pyMyShareSDK
-python setup.py install
-```
-
-## Getting started
-
-Our Wiki contains a lot of resources to get you started with `pyMyShareSDK`:
-
-- [Introduction to the SDK](#edit-me)
-- [Make your first function](#edit-me)
-- Go to [documentation](#documentation) to see the official documentations.
-
-### Example's
-
-We believe that the best way to learn this package is to learn by seeing. We have some examples that you can look at and use as your template for you new project.  
-
-Starting template with environment variables:
-
-```python
-import pymysharesdk
-import os
-
-# get TOKEN from environment
-TOKEN = os.environ('TOKEN')
-
-# create an instance
-pms = pymysharesdk.MyShareSDK(token=TOKEN)
-
-# make a call :return dict
-pms.create_job(name, start_date, end_date, hours)
-```
-
-For more, visit [this page](https://github.com/leandergangso/pyMyShareSDK/examples/) and discover our official examples.
-
 ### Documentation
 
-- Thake a look at our [Wiki pages](https://github.com/LeanderGangso/pyMyShareSDK/wiki).
+- Thake a look at our [Wiki pages](https://github.com/LeanderGangso/pyMyShareSDK/wiki), here you will find all you need to start integration PMS into your project.
 
-- Visit the [MyShare API](https://api.myshare.today) documentation.  
+- Visit the [MyShare API](https://api.myshare.today) documentation, as each method is structured in the same way.  
 
 > All our methods have the same name's as the API, but with **snake_casing** instead.  
-  E.g. updateJob() = update_job()
+  E.g. updateJob = update_job
 
 ## Getting help
 
@@ -99,12 +50,11 @@ You can get help in the following ways:
 
 - Our [Wiki pages](https://github.com/LeanderGangso/pyMyShareSDK/wiki) has the information you need.  
 
-> You could always help us improve by adding missing information to the wiki.
+> You could always help us improve by adding missing information to the wiki! :)
 
 ## Contributing
 
-Contributions of all sizes are welcome. Please review our [contribution guidelines](https://github.com/LeanderGangso/pyMyShareSDK/blob/master/CODE_OF_CONDUCT.md) to get started.  
-You can also help by [reporting bugs](https://github.com/LeanderGangso/pyMyShareSDK/issues/new/choose) or making a [pull request](https://www.freecodecamp.org/news/how-to-make-your-        first-pull-request-on-github-3/).
+Contributions of all sizes are welcome. Please review our [contribution guidelines](https://github.com/LeanderGangso/pyMyShareSDK/blob/master/CODE_OF_CONDUCT.md) to get started. You can also help by [reporting bugs](https://github.com/LeanderGangso/pyMyShareSDK/issues/new/choose) or making a pull request. Lern more about pull requests [here](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/).
 
 ## License - key points
 
