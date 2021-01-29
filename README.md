@@ -4,7 +4,7 @@
 We do not have access to the API at this point, as the API itself is not yet launched.  
 We will be working on and updatinging this repo as soon as the situation changes!**
 
-We are making the MyShare API easy to use, through our MSDK.  
+We are making the MyShare API easy to use, through our MySDK.  
 Let us deal with setting up the correct HTTP request, so you don't have to.
 
 [![License](https://img.shields.io/pypi/l/pymysharesdk.svg?label=License&logo=license&logoColor=red&labelColor=white)](#edit-me)
@@ -26,7 +26,7 @@ Let us deal with setting up the correct HTTP request, so you don't have to.
 ## Introduction
 
 This library provides a pure Python interface for the MyShare API.   
-MSDK supports all of the mentioned Python versions in the tag above.
+MySDK supports all of the mentioned Python versions in the tag above.
 
 Along with the initial API implementation, this library contains clever solutions  
 to help you write even less code and easily combine multiple functions together.
@@ -35,7 +35,7 @@ to help you write even less code and easily combine multiple functions together.
 
 ## Documentation
 
-- Thake a look at our [Wiki pages](https://github.com/LeanderGangso/pyMyShareSDK/wiki), here you will find all you need to start integration MSDK into your project.
+- Thake a look at our [Wiki pages](https://github.com/LeanderGangso/pyMyShareSDK/wiki), here you will find all you need to start integration MySDK into your project.
 
 - Visit the [MyShare API](https://api.myshare.today) documentation, as each method is structured in the same way.  
 
