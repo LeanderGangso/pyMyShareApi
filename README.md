@@ -54,7 +54,7 @@ You can get help in the following ways:
 
 ## Contributing
 
-Contributions of all sizes are welcome. Please review our [contribution guidelines](https://github.com/LeanderGangso/pyMyShareSDK/blob/master/CODE_OF_CONDUCT.md) to get started. You can also help by [reporting bugs](https://github.com/LeanderGangso/pyMyShareSDK/issues/new/choose) or making a pull request. Lern more about pull requests [here](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/).
+Contributions of all sizes are welcome. Please review our [contribution guidelines](https://github.com/LeanderGangso/pyMyShareSDK/blob/master/CODE_OF_CONDUCT.md) to get started. You can also help by [reporting bugs](https://github.com/LeanderGangso/pyMyShareSDK/issues/new/choose) or making a pull request. Learn more about [pull requests](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/).
 
 ## License - key points
 
