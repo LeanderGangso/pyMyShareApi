@@ -1,4 +1,4 @@
-# pyMyShareSDK
+<image src='https://github.com/LeanderGangso/pyMyShareSDK/blob/master/.github/images/MyShare_sdk_logo.svg' height=300 width=100%>
 
 **Important!  
 We do not have access to the API at this point, as the API itself is not yet launched.  
