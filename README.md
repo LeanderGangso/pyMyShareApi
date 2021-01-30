@@ -35,7 +35,7 @@ to help you write even less code and easily combine multiple functions together.
 
 ## Documentation
 
-- Thake a look at our [Wiki pages](https://github.com/LeanderGangso/pyMyShareSDK/wiki), here you will find all you need to start integration MySDK into your project.
+- Thake a look at our [Wiki pages](https://github.com/LeanderGangso/pyMyShareSDK/wiki), here you will find all you need to start integrating MySDK into your project.
 
 - Visit the [MyShare API](https://api.myshare.today) documentation, as each method is structured in the same way.  
 
