@@ -25,11 +25,9 @@ Let us deal with setting up the correct HTTP request, so you don't have to.
 
 ## Introduction
 
-This library provides a pure Python interface for the MyShare API.   
-MySDK supports all of the mentioned Python versions in the tag above.
+This library provides a pure Python interface for the MyShare API. MySDK supports all of the mentioned Python versions in the tag above.
 
-Along with the initial API implementation, this library contains clever solutions  
-to help you write even less code and easily combine multiple functions together.
+Along with the initial API implementation, this library contains clever solutions to help you write even less code and easily combine multiple functions together.
 
 > You will need a TOKEN from MyShare API in order for this library to function.
 
@@ -64,7 +62,7 @@ To be determined...
 <!---
 - When distributing derived works, the source code of the work must be made available under the same license.
 - All modification's has to have the same license and be open source.
-- You do not need to release you modified code, but we would really apreacheate it you did do a [pull request](https://www.freecodecamp.org/news/how-to-make-your-        first-pull-request-on-github-3/) with you changes.
+- You do not need to release you modified code, but we would really apreacheate it you did do a [pull request](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/) with you changes.
 --->
 
 Disclaimer: I am not a lawyer, so any and all information given is strictly based on my understanding and may or may not be correct.
