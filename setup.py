@@ -9,7 +9,7 @@ def read(filename):
 with open('pyMyShareAPI/version.py', 'r', encoding='utf-8') as f:
     version = re.search(r"^__version__\s*=\s*'(.*)'.*$", f.read(), flags=re.MULTILINE).group(1)
 
-setup(name='MySDK',
+setup(name='pymysharesdk',
         version=version,
         description='Easy MyShare SDK for Python',
         long_description=read('README.md'),
@@ -17,17 +17,22 @@ setup(name='MySDK',
         author='LeanderGangso',
         author_email='Leander.Gangso98@gmail.com',
         url='https://github.com/LeanderGangso/pyMyShareAPI',
-        license='............',
-        keywords='myshare api wrapper',
+        license='LGPLv3',
+        keywords='python myshare sdk api tools',
         packages=['mysdk'],
         install_requires=['requests'],
         extras_require={
             'json': 'ujson',
         },
         classifiers=[
-            'Programming Language :: Python :: 3',
-            'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
+            'License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)',
             'Operating System :: OS Independent',
+            'Development Status :: 3 - Alpha', # 3 - Alpha, 4 - Beta, 5 - Production/Stable
+            'Intended Audience :: Developers',
+            'Topic :: Software Development :: Libraries :: Python Modules',
+            'Topic :: Internet',
+            'Programming Language :: Python :: 3.8',
         ],
+        python_requires='>=3.8'
 )
 
