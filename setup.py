@@ -6,7 +6,7 @@ def read(filename):
     with open(filename, encoding='utf-8') as file:
         return file.read()
 
-with open('pyMyShareAPI/version.py', 'r', encoding='utf-8') as f:
+with open('mysdk/version.py', 'r', encoding='utf-8') as f:
     version = re.search(r"^__version__\s*=\s*'(.*)'.*$", f.read(), flags=re.MULTILINE).group(1)
 
 setup(name='pyMyShareSDK',
@@ -30,7 +30,6 @@ setup(name='pyMyShareSDK',
             'Development Status :: 3 - Alpha', # 3 - Alpha, 4 - Beta, 5 - Production/Stable
             'Intended Audience :: Developers',
             'Topic :: Software Development :: Libraries :: Python Modules',
-            'Topic :: Internet',
             'Programming Language :: Python :: 3.8',
         ],
         python_requires='>=3.8'
