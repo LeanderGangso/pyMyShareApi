@@ -1,4 +1,3 @@
-
 ![logo](https://raw.githubusercontent.com/LeanderGangso/pyMyShareSDK/master/.github/images/MyShare_sdk.png)
 
 **Important!  
