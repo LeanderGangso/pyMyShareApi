@@ -1,4 +1,3 @@
-<!-- <image src='https://raw.githubusercontent.com/LeanderGangso/pyMyShareSDK/1c8f897a961a9fe6b982da47dff0d61490db8001/.github/images/MyShare_sdk.svg' height=300 width=100%> -->
 
 ![logo](https://raw.githubusercontent.com/LeanderGangso/pyMyShareSDK/1c8f897a961a9fe6b982da47dff0d61490db8001/.github/images/MyShare_sdk.svg)
 
