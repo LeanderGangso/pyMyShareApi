@@ -1,5 +1,5 @@
 
-![logo](https://raw.githubusercontent.com/LeanderGangso/pyMyShareSDK/1c8f897a961a9fe6b982da47dff0d61490db8001/.github/images/MyShare_sdk.svg)
+![logo](https://raw.githubusercontent.com/LeanderGangso/pyMyShareSDK/master/.github/images/MyShare_sdk.png)
 
 **Important!  
 We do not have access to the API at this point, as the API itself is not yet launched.  
