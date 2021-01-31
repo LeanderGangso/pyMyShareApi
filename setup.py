@@ -9,7 +9,7 @@ def read(filename):
 with open('pyMyShareAPI/version.py', 'r', encoding='utf-8') as f:
     version = re.search(r"^__version__\s*=\s*'(.*)'.*$", f.read(), flags=re.MULTILINE).group(1)
 
-setup(name='pymysharesdk',
+setup(name='pyMyShareSDK',
         version=version,
         description='Easy MyShare SDK for Python',
         long_description=read('README.md'),
