@@ -1,6 +1,6 @@
 <!-- <image src='https://raw.githubusercontent.com/LeanderGangso/pyMyShareSDK/1c8f897a961a9fe6b982da47dff0d61490db8001/.github/images/MyShare_sdk.svg' height=300 width=100%> -->
 
-![logo](https://raw.githubusercontent.com/greyli/flask-share/master/images/demo.png =300x600)
+![logo](https://raw.githubusercontent.com/LeanderGangso/pyMyShareSDK/1c8f897a961a9fe6b982da47dff0d61490db8001/.github/images/MyShare_sdk.svg)
 
 **Important!  
 We do not have access to the API at this point, as the API itself is not yet launched.  
