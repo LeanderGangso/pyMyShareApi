@@ -33,7 +33,7 @@ Along with the initial API implementation, this library contains clever solution
 
 ## Documentation
 
-- Thake a look at our [Wiki pages](https://github.com/LeanderGangso/pyMyShareSDK/wiki), here you will find all you need to start integrating MySDK into your project.
+- Thake a look at our [Wiki pages](https://github.com/LeanderGangso/pyMyShareSDK/wiki/installation), here you will find all you need to start integrating MySDK into your project.
 
 - Visit the [MyShare API](https://api.myshare.today) documentation, as each method is structured in the same way.  
 
