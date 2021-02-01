@@ -17,10 +17,15 @@ Let us deal with setting up the correct HTTP request, so you don't have to.
 ## Table on contents
 
 - [Introduction](#introduction)
+
 - [Documentation](#documentation)
+
 - [Getting help](#getting-help)
+
 - [Contributing](#contributing)
+
 <!-- - [License](#license---key-points) -->
+
 - [API support](#api-support)
 
 ## Introduction
