@@ -14,8 +14,9 @@ Let us deal with setting up the correct HTTP request, so you don't have to.
 [![PyPi](https://img.shields.io/pypi/v/pymysharesdk.svg?logo=pypi&label=PyPi&labelColor=white&color=blue)](https://pypi.org/project/pymysharesdk/)
 [![Python versions](https://img.shields.io/pypi/pyversions/pymysharesdk.svg?label=Python&logo=python&labelColor=white)](https://pypi.org/project/pymysharesdk/)
 [![Downloads](https://img.shields.io/pypi/dm/pymysharesdk?labelColor=white&color=blue&logo=pypi&label=Downloads)](https://pypistats.org/packages/pymysharesdk)  
-[![Build Status](https://github.com/leandergangso/pymysharesdk/workflows/Build/badge.svg?branch=master)](#home)
-[![PyPI upload](https://github.com/leandergangso/pymysharesdk/workflows/Upload%20to%20PyPI/badge.svg)](#home)
+[![GitHub release](https://img.shields.io/github/v/release/leandergangso/pyMyShareSDK?color=blue&label=Release&labelColor=white&logo=github&logoColor=blue)](https://github.com/leandergangso/pyMyShareSDK/releases/latest)
+[![Build status](https://img.shields.io/github/workflow/status/leandergangso/pymysharesdk/Build?label=Build&labelColor=white&logo=github&logoColor=blue)](#home)
+[![PyPI upload](https://img.shields.io/github/workflow/status/leandergangso/pymysharesdk/Upload%20to%20PyPI?label=Upload%20to%20PyPI&labelColor=white&logo=github&logoColor=blue)](#home)
 
 ## Table on contents
 
