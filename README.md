@@ -1,4 +1,4 @@
-![logo](https://raw.githubusercontent.com/LeanderGangso/pyMyShareSDK/master/.github/images/MyShare_sdk.png)
+# ![logo](https://raw.githubusercontent.com/LeanderGangso/pyMyShareSDK/master/.github/images/MyShare_sdk.png)
 
 **Important!  
 We do not have access to the API at this point, as the API itself is not yet launched.  
@@ -7,14 +7,15 @@ We will be working on and updatinging this repo as soon as the situation changes
 We are making the MyShare API easy to use, through our MySDK.  
 Let us deal with setting up the correct HTTP request, so you don't have to.
 
-[![MyShare](https://img.shields.io/badge/MyShare-white?logo=data:image/svg%2bxml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1NSA1NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGc+Cjxwb2x5Z29uIGNsYXNzPSIiIHBvaW50cz0iNTMuNjY4IDIyLjM3NCAzNC44NjggMjIuMjc0IDQxLjg2OCAzLjM3NDIgMzAuNDY4IDMuMjc0MiAyMy40NjggMjIuMTc0IDQuNjY4NSAyMi4wNzQgMC44Njg0NSAzMS44NzQgMTkuNzY4IDMxLjk3NCAxMi43NjggNTAuODc0IDI0LjE2OCA1MC45NzQgMzEuMTY4IDMyLjA3NCA0OS45NjggMzIuMTc0IiBmaWxsPSIjOEFCQThCIi8+Cjxwb2x5Z29uIGNsYXNzPSIiIHBvaW50cz0iNTMuNjY4IDIyLjM3NCAzNC44NjggMjIuMjc0IDQxLjg2OCAzLjM3NDIgMzAuNDY4IDMuMjc0MiAyMy40NjggMjIuMTc0IDE5Ljc2OCAzMS45NzQgMzEuMTY4IDMyLjA3NCA0OS45NjggMzIuMTc0IiBmaWxsPSIjM0UzRTNFIi8+CjwvZz4KPC9zdmc+Cg==)](#pyMySharesdk)
-[![Open source](https://img.shields.io/badge/Open_Source-white?logo=GitHub-Sponsors&logoColor=red)](#pyMySharesdk)
-[![License](https://img.shields.io/pypi/l/pymysharesdk.svg?label=License&logo=license&logoColor=red&labelColor=white)](#edit-me)  
+[![MyShare](https://img.shields.io/badge/MyShare-white?logo=data:image/svg%2bxml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1NSA1NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGc+Cjxwb2x5Z29uIGNsYXNzPSIiIHBvaW50cz0iNTMuNjY4IDIyLjM3NCAzNC44NjggMjIuMjc0IDQxLjg2OCAzLjM3NDIgMzAuNDY4IDMuMjc0MiAyMy40NjggMjIuMTc0IDQuNjY4NSAyMi4wNzQgMC44Njg0NSAzMS44NzQgMTkuNzY4IDMxLjk3NCAxMi43NjggNTAuODc0IDI0LjE2OCA1MC45NzQgMzEuMTY4IDMyLjA3NCA0OS45NjggMzIuMTc0IiBmaWxsPSIjOEFCQThCIi8+Cjxwb2x5Z29uIGNsYXNzPSIiIHBvaW50cz0iNTMuNjY4IDIyLjM3NCAzNC44NjggMjIuMjc0IDQxLjg2OCAzLjM3NDIgMzAuNDY4IDMuMjc0MiAyMy40NjggMjIuMTc0IDE5Ljc2OCAzMS45NzQgMzEuMTY4IDMyLjA3NCA0OS45NjggMzIuMTc0IiBmaWxsPSIjM0UzRTNFIi8+CjwvZz4KPC9zdmc+Cg==)](#home)
+[![Open source](https://img.shields.io/badge/Open_Source-white?logo=GitHub-Sponsors&logoColor=red)](#home)
+[![License](https://img.shields.io/pypi/l/pymysharesdk.svg?label=License&labelColor=white&color=blue)](https://pypi.org/project/pymysharesdk/)  
 [![Python versions](https://img.shields.io/pypi/pyversions/pymysharesdk.svg?label=Python&logo=python&labelColor=white)](https://pypi.org/project/pymysharesdk/)
-[![PyPi](https://img.shields.io/pypi/v/pymysharesdk.svg?logo=pypi&label=PyPi&labelColor=white)](https://pypi.org/project/pymysharesdk/)
-[![Downloads](https://img.shields.io/pypi/dm/pymysharesdk?labelColor=white&logo=pypi&label=Downloads)](https://pypistats.org/packages/pymysharesdk)  
-[![Build Status](https://travis-ci.com/LeanderGangso/pyMyShareSDK.svg?branch=master)](https://travis-ci.com/LeanderGangso/pyMyShareSDK)
-[![Docs](https://img.shields.io/badge/docs-latest-8ab98b.svg)](https://github.com/LeanderGangso/pyMyShareSDK/wiki)  
+[![PyPi](https://img.shields.io/pypi/v/pymysharesdk.svg?logo=pypi&label=PyPi&labelColor=white&color=blue)](https://pypi.org/project/pymysharesdk/)
+[![Downloads](https://img.shields.io/pypi/dm/pymysharesdk?labelColor=white&color=blue&logo=pypi&label=Downloads)](https://pypistats.org/packages/pymysharesdk)  
+[![Docs](https://img.shields.io/badge/Docs-Latest-blue?labelColor=white)](https://github.com/LeanderGangso/pyMyShareSDK/wiki)  
+[![Build Status](https://github.com/leandergangso/pymysharesdk/workflows/Build/badge.svg?branch=master)](#home)
+[![PyPI upload](https://github.com/leandergangso/pymysharesdk/workflows/Upload%20to%20PyPI/badge.svg)](#home)
 
 ## Table on contents
 

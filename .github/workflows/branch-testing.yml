@@ -1,6 +1,6 @@
 # This workflow will run test-cases on branch on new push and pull-requests
 
-name: Branch testing
+name: Build
 
 on:
   push:
