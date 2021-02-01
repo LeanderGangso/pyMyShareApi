@@ -7,7 +7,7 @@ except ImportError:
     import json
 
 import requests
-from requests_oauthlib import OAuth1
+# from requests_oauthlib import OAuth1
 from requests.exceptions import HTTPError, ConnectionError, Timeout
 
 from mysdk.urls import URLs
