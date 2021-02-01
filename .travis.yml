@@ -1,5 +1,6 @@
 language: python
-sudo: false
+dist: xenial
+os: linux
 
 python:
   - "3.6"
