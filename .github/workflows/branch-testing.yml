@@ -1,11 +1,12 @@
 # This workflow will run test-cases on branch on new push and pull-requests
 
-name: Test on update
+name: Branch testing
 
 on:
   push:
   pull_request:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
   test:
@@ -14,6 +15,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
 
       - name: Install dependencies
         run: |
