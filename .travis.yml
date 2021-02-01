@@ -7,8 +7,9 @@ python:
   - "3.8"
   - "3.9"
 
-install:
-  - pip install tox, pyMyShareSDK
+# install:
+#   - pip install tox, requests, pytest
 
 script:
-  - tox -v -e -s py
+  - cd tests && py.test
+  # - tox -v -e -s py
