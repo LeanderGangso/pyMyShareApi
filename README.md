@@ -13,7 +13,7 @@ Let us deal with setting up the correct HTTP request, so you don't have to.
 [![Python versions](https://img.shields.io/pypi/pyversions/pymysharesdk.svg?label=Python&logo=python&labelColor=white)](https://pypi.org/project/pymysharesdk/)
 [![PyPi](https://img.shields.io/pypi/v/pymysharesdk.svg?logo=pypi&label=PyPi&labelColor=white&color=blue)](https://pypi.org/project/pymysharesdk/)
 [![Downloads](https://img.shields.io/pypi/dm/pymysharesdk?labelColor=white&color=blue&logo=pypi&label=Downloads)](https://pypistats.org/packages/pymysharesdk)  
-[![Docs](https://img.shields.io/badge/Docs-Latest-blue?labelColor=white)](https://github.com/LeanderGangso/pyMyShareSDK/wiki)  
+[![Docs](https://img.shields.io/badge/Docs-Latest-blue?labelColor=white)](https://github.com/LeanderGangso/pyMyShareSDK/wiki)
 [![Build Status](https://github.com/leandergangso/pymysharesdk/workflows/Build/badge.svg?branch=master)](#home)
 [![PyPI upload](https://github.com/leandergangso/pymysharesdk/workflows/Upload%20to%20PyPI/badge.svg)](#home)
 
