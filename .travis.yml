@@ -8,9 +8,8 @@ python:
   - "3.8"
   - "3.9"
 
-# install:
-#   - pip install tox, requests, pytest
+install:
+  - pip install tox
 
 script:
-  - cd tests && py.test
-  # - tox -v -e -s py
+  - tox -v -e -s py
