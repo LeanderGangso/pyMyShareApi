@@ -20,7 +20,7 @@ Let us deal with setting up the correct HTTP request, so you don't have to.
 - [Documentation](#documentation)
 - [Getting help](#getting-help)
 - [Contributing](#contributing)
-- [License](#license---key-points)
+<!-- - [License](#license---key-points) -->
 - [API support](#api-support)
 
 ## Introduction
@@ -56,16 +56,17 @@ You can get help in the following ways:
 
 Contributions of all sizes are welcome. Please review our [contribution guidelines](https://github.com/LeanderGangso/pyMyShareSDK/blob/master/CODE_OF_CONDUCT.md) to get started. You can also help by [reporting bugs](https://github.com/LeanderGangso/pyMyShareSDK/issues/new/choose) or making a pull request. Learn more about [pull requests](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/).
 
+<!--
 ## License - key points
 
 To be determined...
-<!---
+
 - When distributing derived works, the source code of the work must be made available under the same license.
 - All modification's has to have the same license and be open source.
 - You do not need to release you modified code, but we would really apreacheate it you did do a [pull request](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/) with you changes.
---->
 
 Disclaimer: I am not a lawyer, so any and all information given is strictly based on my understanding and may or may not be correct.
+-->
 
 ## API support
 
