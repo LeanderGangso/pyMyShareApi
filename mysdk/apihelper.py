@@ -30,11 +30,11 @@ def _make_request(url, method='get', data=None):
     method = method.lower()
 
     if method == 'get':
-        return self.__format_res(requests.get(url))
+        return requests.get(url)
     elif method == 'post':
-        return self.__format_res(requests.post(url, data=data))
+        return requests.post(url, data=data)
     elif method == 'put':
-        return self.__format_res(requests.put(url, data=data))
+        return requests.put(url, data=data)
     elif method == 'delete':
-        return self.__format_res(requests.delete(url, data=data))
+        return requests.delete(url, data=data)
 

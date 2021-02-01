@@ -4,6 +4,8 @@ import re
 
 base_url = 'https://github.com/LeanderGangso/pyMyShareAPI'
 
+requirements = ['requests', 'requests_oauthlib']
+
 def read(filename):
     with open(filename, encoding='utf-8') as file:
         return file.read()
@@ -23,14 +25,22 @@ setup(name='pyMyShareSDK',
         license='LGPLv3',
         keywords='python myshare sdk api tools',
         packages=['mysdk'],
-        install_requires=['requests'],
+        install_requires=requirements,
         extras_require={
             'json': 'ujson',
+            'dev': [
+                'twine',
+                'pytest',
+                'check-manifest',
+                'tox',
+                'setuptools'
+            ]
         },
         classifiers=[
-            'License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)',
-            'Operating System :: OS Independent',
             'Development Status :: 3 - Alpha', # 3 - Alpha, 4 - Beta, 5 - Production/Stable
+            # 'License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)',
+            'License :: OSI Approved :: ',
+            'Operating System :: OS Independent',
             'Intended Audience :: Developers',
             'Topic :: Software Development :: Libraries :: Python Modules',
             'Programming Language :: Python :: 3.8',
