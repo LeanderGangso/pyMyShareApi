@@ -31,9 +31,6 @@ jobs:
 
       - name: Generate changelog
         uses: saadmk11/changelog-ci@v0.7.0
-        with:
-          changelog_filename: CHANGELOG.md
-          config_file: ".github/config_release_changelog.json"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
