@@ -7,8 +7,8 @@ on:
   push:
     # branches:
       # - master
-    tags:
-      - 'v*'
+    # tags:
+      # - 'v*'
 
 jobs:
   release:
@@ -16,6 +16,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
+
+      - name: get path
+        run: ls -a && ls -a ../ && ls -a ../../
+
       - name: Generate changelog
         id: Changelog
         uses: mikepenz/release-changelog-builder-action@main
@@ -24,9 +29,6 @@ jobs:
         with:
           outputFile: 'CHANGELOG.md'
           configuration: '.github/config_release_changelog.json'
-
-      - name: get path
-        run: ls -a && ls -a ../ && ls -a ../../
 
       - name: Create release
         uses: actions/create-release@latest
