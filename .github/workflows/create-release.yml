@@ -23,8 +23,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           outputFile: "CHANGELOG.md"
-          configuration: '.github/config_release_changelog.json'
-
+          configuration: '../config_release_changelog.json'
+          failOnError: true
+          fromTag:
 
       - name: Create release
         uses: actions/create-release@latest
@@ -33,7 +34,6 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
-          body: |
-            ${{ steps.Changelog.outputs.changelog }}
+          body: ${{ steps.Changelog.outputs.changelog }}
           draft: true
           prerelease: true
