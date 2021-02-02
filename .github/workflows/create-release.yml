@@ -17,13 +17,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Generate changelog
-        uses: thomaseizinger/keep-a-changelog-new-release@v1
         with:
-          version: ${{ github.ref }}
+          fetch-depth: 0
 
-      - name: Create new release
+      - name: Changelog
+        uses: Bullrich/generate-release-changelog@master
+        env:
+          REPO: ${{ github.repository }}
+
+      - name: Create release
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -33,9 +35,4 @@ jobs:
           body: |
             ${{ steps.Changelog.outputs.changelog }}
           draft: true
-          prerelease: false
-
-      #   uses: ncipollo/release-action@v1
-      #   with:
-      #     bodyFile: "CHANGELOG.md"
-      #     token: ${{ secrets.GITHUB_TOKEN }}
+          prerelease: true
