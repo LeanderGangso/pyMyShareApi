@@ -27,13 +27,13 @@ jobs:
     #     env:
     #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - uses: actions/checkout@v2
+
       - name: Generate changelog
-        uses: saadmk11/changelog-ci@latest
+        uses: saadmk11/changelog-ci@0.7.0
         with:
           changelog_filename: CHANGELOG.md
           config_file: ".github/config_release_changelog.json"
-          committer_username: 'LeanderGangso'
-          committer_email: 'Leander.Gangso98@gmail.com'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
