@@ -68,7 +68,7 @@ Contributions of all sizes are welcome. Please review our [contribution guidelin
 
 > Learn how to [pull requests](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/).
 
-Get started with [contributing](https://github.com/LeanderGangso/pyMyShareSDK/blob/master/.github/CONTRIBUTING.md). :)
+Get started with [contributing](https://github.com/LeanderGangso/pyMyShareSDK/blob/master/.github/CONTRIBUTING.md).
 
 <!--
 ## License - key points
