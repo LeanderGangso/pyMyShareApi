@@ -7,8 +7,8 @@ on:
   push:
     # branches:
       # - master
-    tags:
-      - 'v*'
+    # tags:
+      # - 'v*'
 
 jobs:
   release:
@@ -16,30 +16,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: get path
-        run: ls -a
+    #   - name: Generate changelog
+    #     id: Changelog
+    #     uses: mikepenz/release-changelog-builder-action@main
+    #     with:
+    #       owner: 'LeanderGangso'
+    #       repo: 'pyMyShareSDK'
+    #       outputFile: 'CHANGELOG.md'
+    #       configuration: '.github/config_release_changelog.json'
+    #     env:
+    #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate changelog
-        id: Changelog
-        uses: mikepenz/release-changelog-builder-action@main
+        uses: saadmk11/changelog-ci@latest
+        with:
+          changelog_filename: CHANGELOG.md
+          config_file: ".github/config_release_changelog.json"
+          committer_username: 'LeanderGangso'
+          committer_email: 'Leander.Gangso98@gmail.com'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          owner: 'LeanderGangso'
-          repo: 'pyMyShareSDK'
-          outputFile: 'CHANGELOG.md'
-          configuration: '.github/config_release_changelog.json'
 
-      - name: get path 2
+      - name: Run check
         run: ls -a
 
-      - name: Create release
-        uses: actions/create-release@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
-          body: ${{ steps.Changelog.outputs.changelog }}
-          draft: 'true'
-          prerelease: 'true'
+      # - name: Create release
+      #   uses: actions/create-release@latest
+      #   with:
+      #     tag_name: ${{ github.ref }}
+      #     release_name: ${{ github.ref }}
+      #     body: ${{ steps.Changelog.outputs.changelog }}
+      #     draft: 'true'
+      #     prerelease: 'true'
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
