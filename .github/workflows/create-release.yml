@@ -23,6 +23,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           outputFile: "CHANGELOG.md"
+          configuration: '.github/config_release_changelog.json'
+
 
       - name: Create release
         uses: actions/create-release@latest
