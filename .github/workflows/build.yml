@@ -7,7 +7,7 @@ on:
     branches:
       - '**'
     pahts:
-      - './mysdk/**'
+      - '**/mysdk/**'
     tags-ignore:
       - '**'
   pull_request:
