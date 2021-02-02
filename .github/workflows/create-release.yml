@@ -22,8 +22,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          path: '.github'
-          outputFile: '../CHANGELOG.md'
+          outputFile: 'CHANGELOG.md'
           configuration: 'config_release_changelog.json'
 
       # - name: Create release
