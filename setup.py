@@ -7,7 +7,6 @@ requirements = [
 ]
 
 requirements_dev = [
-    'twine==3.3.0',
     'pytest==6.2.2',
     'check-manifest==0.46',
 ]
