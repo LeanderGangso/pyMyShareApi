@@ -1,0 +1,19 @@
+# This workflow will update codecov, so that the coverage badge is up to date on master branch.
+
+name: Codecov
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+
+    # NOT DONE
