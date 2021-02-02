@@ -18,14 +18,24 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Show changelog
+      - name: Generate changelog
         uses: lorislab/changelog-action@v1
         with:
           args: generate --console -v debug
         env:
           CHANGELOG_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: Create new release
+      - name: Create new release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body_path: "RELEASE_LOG.md"
+          draft: true
+          prerelease: false
+
       #   uses: ncipollo/release-action@v1
       #   with:
       #     bodyFile: "CHANGELOG.md"
