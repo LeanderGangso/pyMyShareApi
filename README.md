@@ -47,8 +47,8 @@ Along with the initial API implementation, this library contains clever solution
 
 - Visit the [MyShare API](https://api.myshare.today) documentation, as each method is structured in the same way.  
 
-> All our methods have the same name's as the API, but with **snake_casing** instead.  
-  E.g. updateJob = update_job
+> All our methods have the same name's as the API, but with **snake_casing** instead.
+> E.g. updateJob = update_job
 
 ## Getting help
 
@@ -64,7 +64,11 @@ You can get help in the following ways:
 
 ## Contributing
 
-Contributions of all sizes are welcome. Please review our [contribution guidelines](https://github.com/LeanderGangso/pyMyShareSDK/blob/master/CODE_OF_CONDUCT.md) to get started. You can also help by [reporting bugs](https://github.com/LeanderGangso/pyMyShareSDK/issues/new/choose) or making a pull request. Learn more about [pull requests](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/).
+Contributions of all sizes are welcome. Please review our [contribution guidelines](https://github.com/LeanderGangso/pyMyShareSDK/blob/master/.github/CODE_OF_CONDUCT.md) to get started. You can also help by [reporting bugs](https://github.com/LeanderGangso/pyMyShareSDK/issues/new/choose) or making a pull request.
+
+> Learn how to [pull requests](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/).
+
+Get started with [contributing](https://github.com/LeanderGangso/pyMyShareSDK/blob/master/.github/CONTRIBUTING.md).
 
 <!--
 ## License - key points
@@ -80,7 +84,7 @@ Disclaimer: I am not a lawyer, so any and all information given is strictly base
 
 ## API support
 
-⏳ [MyShare API 1.0](#link-to-release-notes)
+⏳ [MyShare API v1.0.0](#link-to-release-notes)
 <!--
 - ✔  [MyShare API ...](#link-to-release-notes)
 - ❌ [MyShare API ...](#link-to-release-notes)

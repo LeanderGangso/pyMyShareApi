@@ -1,11 +1,19 @@
-# This workflow will run test-cases on branch on new push and pull-requests
+# This workflow will run test-cases on branch on new push and pull-requests.
 
 name: Build
 
 on:
   push:
+    branches:
+      - '**'
+    paths:
+      - 'mysdk/**'
+      - 'tests/**'
+    tags-ignore:
+      - '**'
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   test:
@@ -17,7 +25,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+
+      - name: Setting up Python env's
+        uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
 
@@ -28,7 +38,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest tests/
+          pytest
 
 
 

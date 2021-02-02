@@ -1,6 +1,6 @@
 
 class URLs():
-    def __init__(self) -> None:
+    def __init__(self):
         self.base = "https://api.myshare.today/"
 
         # get inforamtion

@@ -1,0 +1,40 @@
+# This workflow will create new release with given tag, when a tag is pushed to master,
+# will also auto generate changelog for the new release body.
+
+name: Create Release
+
+on:
+  push:
+    # branches:
+      # - master
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate changelog
+        id: Changelog
+        uses: mikepenz/release-changelog-builder-action@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          outputFile: 'CHANGELOG.md'
+          configuration: '.github/config_release_changelog.json'
+
+      - name: get path
+        run: pwd && ls -a && ls -a ../
+
+      - name: Create release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body: ${{ steps.Changelog.outputs.changelog }}
+          draft: 'true'
+          prerelease: 'true'
