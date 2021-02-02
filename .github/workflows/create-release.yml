@@ -23,7 +23,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           outputFile: 'CHANGELOG.md'
-          configuration: 'configuration.json'
+          configuration: '.github/config_release_changelog.json'
 
       - name: get path
         run: pwd && ls -a && ls -a ../
