@@ -1,49 +1,21 @@
-# This workflow will create new release with given tag, when a tag is pushed to master,
-# will also auto generate changelog for the new release body.
+name: Changelog CI
 
-name: Create Release
-
+# Controls when the action will run. Triggers the workflow on a pull request
 on:
-  push:
-    # branches:
-      # - master
-    # tags:
-      # - 'v*'
+  pull_request:
+    types: [opened, reopened]
 
 jobs:
-  release:
-
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    #   - name: Generate changelog
-    #     id: Changelog
-    #     uses: mikepenz/release-changelog-builder-action@main
-    #     with:
-    #       owner: 'LeanderGangso'
-    #       repo: 'pyMyShareSDK'
-    #       outputFile: 'CHANGELOG.md'
-    #       configuration: '.github/config_release_changelog.json'
-    #     env:
-    #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+      # Checks-out your repository
       - uses: actions/checkout@v2
 
-      - name: Generate changelog
+      - name: Run Changelog CI
         uses: saadmk11/changelog-ci@v0.7.0
+        with:
+          changelog_filename: CHANGELOG.md
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Run check
-        run: ls -a
-
-      # - name: Create release
-      #   uses: actions/create-release@latest
-      #   with:
-      #     tag_name: ${{ github.ref }}
-      #     release_name: ${{ github.ref }}
-      #     body: ${{ steps.Changelog.outputs.changelog }}
-      #     draft: 'true'
-      #     prerelease: 'true'
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
