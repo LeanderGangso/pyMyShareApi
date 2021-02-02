@@ -25,6 +25,9 @@ jobs:
           outputFile: 'CHANGELOG.md'
           configuration: 'config_release_changelog.json'
 
+      - name: get path
+        run: pwd && ls -a
+
       # - name: Create release
       #   uses: actions/create-release@latest
       #   env:
