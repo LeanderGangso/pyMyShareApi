@@ -2,7 +2,7 @@
 
 name: Codecov
 
-on:
+off:
   push:
     branches:
       - master
