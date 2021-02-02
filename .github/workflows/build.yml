@@ -20,7 +20,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+
+      - name: Setting up Python env's
+        uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
 
