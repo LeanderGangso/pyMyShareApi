@@ -28,8 +28,9 @@ jobs:
     #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/checkout@v2
-      
+
       - name: Generate changelog
+        id: Changelog
         uses: heinrichreimer/action-github-changelog-generator@v2.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -37,13 +38,13 @@ jobs:
       - name: Run check
         run: ls -a
 
-      # - name: Create release
-      #   uses: actions/create-release@latest
-      #   with:
-      #     tag_name: ${{ github.ref }}
-      #     release_name: ${{ github.ref }}
-      #     body: ${{ steps.Changelog.outputs.changelog }}
-      #     draft: 'true'
-      #     prerelease: 'true'
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create release
+        uses: actions/create-release@latest
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body: ${{ steps.Changelog.outputs.changelog }}
+          draft: 'true'
+          prerelease: 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
