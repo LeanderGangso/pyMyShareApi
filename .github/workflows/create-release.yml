@@ -16,10 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
       - name: get path
-        run: ls -a && ls -a ../ && ls -a ../../
+        run: ls -a
 
       - name: Generate changelog
         id: Changelog
@@ -27,8 +25,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          owner: 'LeanderGangso'
+          repo: 'pyMyShareSDK'
           outputFile: 'CHANGELOG.md'
           configuration: '.github/config_release_changelog.json'
+
+      - name: get path 2
+        run: ls -a
 
       - name: Create release
         uses: actions/create-release@latest
