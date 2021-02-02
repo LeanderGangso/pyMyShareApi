@@ -26,7 +26,7 @@ jobs:
           configuration: '.github/config_release_changelog.json'
 
       - name: get path
-        run: pwd && ls -a && ls -a ../
+        run: ls -a && ls -a ../ && ls -a ../../
 
       - name: Create release
         uses: actions/create-release@latest
