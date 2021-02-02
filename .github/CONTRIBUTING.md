@@ -114,8 +114,10 @@ Follow along to make a one-off code change.
     It's a good idea to clean up a branch when you are done with it.
 
     ```bash
+    git checkout master
     git branch -D branch-name
     git push origin --delete branch-name
+    git pull upstream
     ```
 
 1. Thank you, you have contributed to `pyMyShareSDK`!
