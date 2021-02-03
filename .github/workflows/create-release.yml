@@ -5,8 +5,8 @@ name: Create Release
 
 on:
   push:
-    # branches:
-      # - master
+    branches:
+      - master
     tags:
       - 'v*'
 
@@ -38,25 +38,34 @@ jobs:
       - name: test
         run: ls -a && ls -a ../ && ls -a ../../
 
-      # - name: Update changelog
-        # env:
-          # NEW_VERSION: ${{ steps.generate.outputs.toTag }}
-          # PRE_VERSION: ${{ steps.generate.outputs.fromTag }}
-        # run: |
-        #   sed -n -e '/Changelog/,/Unreleased\n/1/p' CHANGELOG.md > NEW_CHANGELOG.md 
-        #   echo \ >> NEW_CHANGELOG.md
+      - name: Update changelog
+        env:
+          NEW_VERSION: ${{ steps.generate.outputs.toTag }}
+          PRE_VERSION: ${{ steps.generate.outputs.fromTag }}
+          NEW_LOG: ${{ steps.generate.outputs.changelog }}
+        run: |
+          sed -n -e '/Changelog/,/Unreleased\n/1/p' CHANGELOG.md > NEW_CHANGELOG.md 
+          echo \ >> NEW_CHANGELOG.md
 
-        #   steps.Changelog.outputs.changelog >> NEW_CHANGELOG.md
-        #   echo \ >> NEW_CHANGELOG.md
+          echo $NEW_LOG >> NEW_CHANGELOG.md
+          echo \ >> NEW_CHANGELOG.md
 
-        #   sed -n -e '/a/,/b/1/p' CHANGELOG.md >> NEW_CHANGELOG.md
-        #   echo \ >> NEW_CHANGELOG.md
+          sed -n -e '/a/,/b/1/p' CHANGELOG.md >> NEW_CHANGELOG.md
+          echo \ >> NEW_CHANGELOG.md
 
-        #   sed "s/v$PRE_VERSION...HEAD/$NEW_VERSION...HEAD/g" CHANGELOG.md > NEW_CHANGELOG.md
-        #   sed "s+<\!-- new release here -->+<\!-- new release here -->\n\[v$NEW_VERSION]: https://github.com/leandergangso/pymysharesdk/compare/v$PRE_VERSION...$NEW_VERSION+g" CHANGELOG.md > NEW_CHANGELOG.md
+          sed "s/v$PRE_VERSION...HEAD/$NEW_VERSION...HEAD/g" CHANGELOG.md > NEW_CHANGELOG.md
+          sed "s+<\!-- new release here -->+<\!-- new release here -->\n\[v$NEW_VERSION]: https://github.com/leandergangso/pymysharesdk/compare/v$PRE_VERSION...$NEW_VERSION+g" CHANGELOG.md > NEW_CHANGELOG.md
 
-        #   NEW_CHANGELOG.md > CHANGELOG.md
-        #   rm NEW_CHANGELOG.md
+          cat NEW_CHANGELOG.md
+
+        # NEW_CHANGELOG.md > CHANGELOG.md
+        # rm NEW_CHANGELOG.md
+
+      - name: env test
+        run: |
+          echo $NEW_VERSION
+          echo $PRE_VERSION
+          echo $NEW_LOG
 
       - name: Create release
         uses: actions/create-release@latest
