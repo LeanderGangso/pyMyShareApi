@@ -47,7 +47,7 @@ jobs:
         run: perl -ne '$k++ if /##/; {print if $k<2}' CHANGELOG.md > RELEASE.md
 
       - name: Create release
-        uses: actions/create-release@latest
+        uses: actions/create-release@v1
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
