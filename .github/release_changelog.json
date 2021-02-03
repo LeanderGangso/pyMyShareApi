@@ -1,21 +1,39 @@
 {
     "categories": [
         {
-            "title": "## 🚀 Features",
+            "title": "### Added",
             "labels": [
-                "feature"
+                "add"
             ]
         },
         {
-            "title": "## 🐛 Fixes",
+            "title": "### Changed",
+            "labels": [
+                "edit"
+            ]
+        },
+        {
+            "title": "### Deprecated",
+            "labels": [
+                "dep"
+            ]
+        },
+        {
+            "title": "### Removed",
+            "labels": [
+                "del"
+            ]
+        },
+        {
+            "title": "### Fixed",
             "labels": [
                 "fix"
             ]
         },
         {
-            "title": "## 🧪 Tests",
+            "title": "### Security",
             "labels": [
-                "test"
+                "security"
             ]
         }
     ],
