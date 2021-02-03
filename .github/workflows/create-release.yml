@@ -37,7 +37,7 @@ jobs:
           new_tag: ${{ github.ref }}
         run: |
           export pre_tag=$(sed -n 3p mysdk/version.py)
-          sed -i "/^.*new release here/a \\n## [v$new_tag](https://github.com/leandergangso/pymysharesdk/compare/v$pre_tag...v$new_tag) - $(date + %Y-%d-%m)\\n\\n$2" CHANGELOG.md
+          sed -i "/^.*new release here/a \\n## [v$new_tag](https://github.com/leandergangso/pymysharesdk/compare/v$pre_tag...v$new_tag) - $(date + %Y-%d-%m)\\n\\n$NEW_CONTENT" CHANGELOG.md
           sed -i -e "s/__version__.*/__version__ = $new_tag/" mysdk/version.py
 
       - name: Update changelog
