@@ -33,8 +33,8 @@ jobs:
 
       - name: Generate Changelog using github-changelog-generator
         uses: faberNovel/github-changelog-generator-action@v1.0.0-alpha02
-          with:
-            options: --token ${{ secrets.GITHUB_TOKEN }}
+        with:
+          options: --token ${{ secrets.GITHUB_TOKEN }}
 
 
       # - name: Create/Update changelog
