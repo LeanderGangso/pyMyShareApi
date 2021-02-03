@@ -33,7 +33,7 @@ jobs:
 
       - name: Edit changelog
         run: |
-          .github/update_changelog.bash ${{ github.ref }} ${{ steps.changelog.outputs.changelog }}
+          .github/update_changelog.bash "${{ github.ref }}" "${{ steps.changelog.outputs.changelog }}"
 
       - name: Update changelog
         uses: test-room-7/action-update-file@v1
