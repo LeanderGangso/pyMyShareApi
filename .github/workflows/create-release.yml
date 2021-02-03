@@ -33,9 +33,8 @@ jobs:
 
       - name: Edit changelog
         run: |
-          pre_tag=$(sed -n 3p mysdk/version.py)
-          sed -i "/^.*new release here/a \\n## [v$new_tag](https://github.com/leandergangso/pymysharesdk/compare/v$pre_tag...v${{github.ref}}) - $(date + %Y-%d-%m)\\n\\n${{steps.changelog.outputs.changelog}}" CHANGELOG.md
-          sed -i -e "s/__version__.*/__version__ = ${{github.ref}}/" mysdk/version.py
+          ${{ steps.changelog.outputs.changelog }} > NEW_CHANGELOG.md
+          cat NEW_CHANGELOG.md
 
       - name: Update changelog
         uses: test-room-7/action-update-file@v1
