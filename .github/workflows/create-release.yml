@@ -16,6 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+
       # - name: Generate changelog only PR
       #   id: generate
       #   uses: mikepenz/release-changelog-builder-action@main
@@ -24,6 +25,7 @@ jobs:
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+
       # - name: Generate changelog
       #   id: changelog
       #   uses: ardalanamini/auto-changelog@v1.1.0
@@ -31,9 +33,12 @@ jobs:
       #     token: ${{ secrets.GITHUB_TOKEN }}
       #     exclude: "test, style"
 
+
       # - name: Get current date
+    
       #   id: date
       #   run: echo "name=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
 
       - name: Update changelog file
         uses: charmixer/auto-changelog-action@v1
@@ -41,7 +46,8 @@ jobs:
           output: CHANGELOG.md
           token: ${{ secrets.YOUR_GITHUB_TOKEN }}
       
-      - run: sed -i '$ d' CHANGELOG.md
+      - name: Remove last line
+        run: sed -i '$ d' CHANGELOG.md
 
       - name: Update changelog
         uses: test-room-7/action-update-file@v1
@@ -55,9 +61,8 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
-          body: 
+          body_path: CHANGELOG.md
           prerelease: false
           draft: 'true'
         env:
-          CHANGELOG: $(echo CHANGELOG.md)
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
