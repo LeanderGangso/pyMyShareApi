@@ -16,13 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Update changelog file
+      - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
         with:
           output: CHANGELOG.md
           token: ${{ secrets.YOUR_GITHUB_TOKEN }}
       
-      - name: Remove last line
+      - name: Remove from changelog
         run: sed -i '$ d' CHANGELOG.md
 
       - name: Update changelog
@@ -31,20 +31,17 @@ jobs:
           file-path: CHANGELOG.md
           commit-msg: Update changelog for mew release
           github-token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Get release changelog
+        run: perl -ne "$k++ if /##/; {print if $k<2}" CHANGELOG.md > RELEASE.md
 
-      # - name: Create release
-      #   uses: actions/create-release@latest
-      #   with:
-      #     tag_name: ${{ github.ref }}
-      #     release_name: ${{ github.ref }}
-      #     body_path: CHANGELOG.md
-      #     prerelease: false
-      #     draft: 'true'
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: dropseed/changerelease@v1
+      - name: Create release
+        uses: actions/create-release@latest
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          tag_refix: ''
-          changelog: CHANGELOG.md
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body_path: RELEASE.md
+          prerelease: false
+          draft: 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
