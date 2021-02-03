@@ -29,20 +29,22 @@ jobs:
       - name: Remove from changelog
         run: head -n -4 NEW_CHANGELOG.md > CHANGELOG.md
 
+      - name: Update version
+        run: sed -i -e "s/__version__.*/__version__ = '$TAG'/" mysdk/version.py
+        env:
+          TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
+
       - name: Update changelog
         uses: test-room-7/action-update-file@v1
         with:
-          file-path: CHANGELOG.md
-          commit-msg: Update changelog for mew release
+          file-path: |
+            CHANGELOG.md
+            mysdk/version.py
+          commit-msg: Update resource - workflow
           github-token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Get release changelog
         run: perl -ne '$k++ if /##/; {print if $k<2}' CHANGELOG.md > RELEASE.md
-
-      - name: Update version
-        run: sed -i -e "s/__version__.*/__version__ = '$TAG'/" mysdk/version.py
-        env:
-          TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
 
       - name: Create release
         uses: actions/create-release@latest
