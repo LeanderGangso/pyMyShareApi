@@ -25,14 +25,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update changelog
+        id: changelog
         uses: ardalanamini/auto-changelog@v1.1.0
         with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        exclude: "test, style"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          exclude: "test, style"
 
 
       - name: testing output
         run: |
+          echo ${{ steps.changelog.outputs.changelog }}
           echo ${{ steps.generate.outputs.toTag }}
           echo ${{ steps.generate.outputs.fromTag }}
           echo ${{ steps.generate.outputs.changelog }}
