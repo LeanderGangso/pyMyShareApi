@@ -25,10 +25,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update changelog
-        id: changelog
-        uses: thomaseizinger/keep-a-changelog-new-release@1.2.0
+        uses: saadmk11/changelog-ci@v0.7.0
         with:
-          version: ${{ steps.generate.outputs.toTag }}
+          changelog_filename: CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: testing output
+        run: |
+          echo ${{ steps.generate.outputs.toTag }}
+          echo ${{ steps.generate.outputs.fromTag }}
+          echo ${{ steps.generate.outputs.changelog }}
 
       # - name: Create release
       #   uses: actions/create-release@latest
