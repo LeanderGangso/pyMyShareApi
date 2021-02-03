@@ -33,7 +33,7 @@ jobs:
 
       - name: Edit changelog
         run: |
-          echo ${{ steps.changelog.outputs.changelog }} > NEW_CHANGELOG.md
+          echo $steps.changelog.outputs.changelog > NEW_CHANGELOG.md
           cat NEW_CHANGELOG.md
 
       - name: Update changelog
