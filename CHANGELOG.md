@@ -34,9 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - log data
 
 <!-- hyperlinks here -->
-
 [Unreleased]: https://github.com/leandergangso/pymysharesdk/compare/v0.0.1...HEAD
 <!-- new release here -->
 [v0.0.1]: https://github.com/leandergangso/pymysharesdk/releases/tag/v0.0.1
-
 <!-- end of file -->
