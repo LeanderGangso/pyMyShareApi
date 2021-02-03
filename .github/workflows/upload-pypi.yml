@@ -1,17 +1,15 @@
 # This workflow will upload a Python Package using Twine when a release is created,
-# do not upload on pre-release and (alpha,beta) versions.
+# do not upload on pre-release and (alpha,beta...) versions.
 
 name: Upload to PyPI
 
 on:
   release:
     types:
-      - created
+      - 'published'
 
 jobs:
   deploy:
-
-    if: github.ref == 'v?.?.?'
 
     runs-on: ubuntu-latest
 
