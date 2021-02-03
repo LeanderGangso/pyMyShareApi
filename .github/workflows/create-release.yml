@@ -16,19 +16,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # - name: Generate changelog
-      #   id: generate
-      #   uses: mikepenz/release-changelog-builder-action@main
-      #   with:
-      #     configuration: '.github/release_changelog.json'
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate changelog
+        id: generate
+        uses: mikepenz/release-changelog-builder-action@main
+        with:
+          configuration: '.github/release_changelog.json'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: env test
-      #   run: |
-      #     echo $NEW_VERSION
-      #     echo $PRE_VERSION
-      #     echo $NEW_LOG
+      - name: env test
+        run: |
+          echo $NEW_VERSION
+          echo $PRE_VERSION
+          echo $NEW_LOG
 
       - name: Update changelog
         id: changelog
