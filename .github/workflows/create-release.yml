@@ -47,6 +47,8 @@ jobs:
       - name: Create release
         uses: actions/create-release@latest
         with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
           body_path: RELEASE.md
           prerelease: ${{ contains(github.ref, '-') }}
           draft: false # true on testing
