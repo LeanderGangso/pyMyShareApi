@@ -41,7 +41,7 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
           body: ${{ steps.Changelog.outputs.changelog }}
-          prerelease: ${{ github.ref == 'v?.?.?-**' }}
+          prerelease: ${{ contains(github.ref, 'v?.?.?-**') }}
           draft: 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
