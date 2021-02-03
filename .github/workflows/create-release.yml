@@ -16,41 +16,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    #   - name: Generate changelog
-    #     id: Changelog
-    #     uses: mikepenz/release-changelog-builder-action@main
-    #     with:
-    #       owner: 'LeanderGangso'
-    #       repo: 'pyMyShareSDK'
-    #       outputFile: 'CHANGELOG.md'
-    #       configuration: '.github/config_release_changelog.json'
-    #     env:
-    #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - uses: actions/checkout@v2
 
-      # - name: Generate changelog
+      - name: Generate changelog
+        id: Changelog
+        uses: mikepenz/release-changelog-builder-action@main
+        with:
+          outputFile: 'CHANGELOG.md'
+          configuration: '.github/release_changelog.json'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Generate new changelog
       #   id: Changelog
-      #   uses: heinrichreimer/action-github-changelog-generator@v2.2
+      #   uses: ardalanamini/auto-changelog@v1.1.0
       #   with:
       #     token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Auto Changelog
-        id: Changelog
-        uses: ardalanamini/auto-changelog@v1.1.0
+      # - name: Update changelog
+
+      - name: Create release
+        uses: actions/create-release@latest
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Update Changelog
-        run: echo "${{ steps.Changelog.outputs.changelog }}" >> CHANGELOG.md
-
-      # - name: Create release
-      #   uses: actions/create-release@latest
-      #   with:
-      #     tag_name: ${{ github.ref }}
-      #     release_name: ${{ github.ref }}
-      #     body: ${{ steps.Changelog.outputs.changelog }}
-      #     draft: 'true'
-      #     prerelease: 'true'
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body: ${{ steps.Changelog.outputs.changelog }}
+          prerelease: ${{ github.ref == 'v?.?.?-**' }}
+          draft: 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
