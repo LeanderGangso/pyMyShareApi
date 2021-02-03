@@ -56,13 +56,19 @@ jobs:
           commit-msg: Update changelog for mew release
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create release
-        uses: actions/create-release@latest
+      # - name: Create release
+      #   uses: actions/create-release@latest
+      #   with:
+      #     tag_name: ${{ github.ref }}
+      #     release_name: ${{ github.ref }}
+      #     body_path: CHANGELOG.md
+      #     prerelease: false
+      #     draft: 'true'
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: dropseed/changerelease@v1
         with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
-          body_path: CHANGELOG.md
-          prerelease: false
-          draft: 'true'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tag_prefix: v
+          changelog: CHANGELOG.md
