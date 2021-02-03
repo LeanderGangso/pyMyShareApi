@@ -32,8 +32,10 @@ jobs:
           exclude: "test, style"
 
       - name: Edit changelog
+        env:
+          NEW_CONTENT: ${{ steps.changelog.outputs.changelog }}
         run: |
-          echo $steps.changelog.outputs.changelog > NEW_CHANGELOG.md
+          echo "$NEW_CONTENT" > NEW_CHANGELOG.md
           cat NEW_CHANGELOG.md
 
       - name: Update changelog
