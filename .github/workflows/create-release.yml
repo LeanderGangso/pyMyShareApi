@@ -23,7 +23,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Remove from changelog
-        run: head -n -4 NEW_CHANGELOG > CHANGELOG.md
+        run: head -n -4 NEW_CHANGELOG.md > CHANGELOG.md
 
       - name: Update changelog
         uses: test-room-7/action-update-file@v1
@@ -41,7 +41,7 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
           body_path: RELEASE.md
-          prerelease: false
+          prerelease: true
           draft: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
