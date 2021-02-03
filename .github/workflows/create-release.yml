@@ -36,6 +36,11 @@ jobs:
         with:
           options: --token ${{ secrets.GITHUB_TOKEN }}
 
+      - name: testing
+        run: |
+          ls
+          cat CHANGELOG.md
+
 
       # - name: Create/Update changelog
       #   uses: charmixer/auto-changelog-action@v1
@@ -59,11 +64,7 @@ jobs:
       #   run: |
       #     git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
 
-      - name: testing output
-        run: |
-          echo ${{ steps.changelog.outputs.changelog }}
-          echo "--- SPLIT LINE HERE ---"
-          echo ${{ steps.generate.outputs.changelog }}
+
 
       # - name: Update changelog
       #   run: |
