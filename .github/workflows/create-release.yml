@@ -31,7 +31,7 @@ jobs:
       #     token: ${{ secrets.GITHUB_TOKEN }}
       #     exclude: "test, style"
 
-      - name: Generate Changelog using github-changelog-generator
+      - name: Generate Changelog
         uses: faberNovel/github-changelog-generator-action@v1.0.0-alpha02
         with:
           options: --token ${{ secrets.GITHUB_TOKEN }}
