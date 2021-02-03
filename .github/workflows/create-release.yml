@@ -39,21 +39,24 @@ jobs:
         uses: charmixer/auto-changelog-action@v1
         with:
           output: CHANGELOG.md
+          token: ${{ secrets.YOUR_GITHUB_TOKEN }}
+      
+      - run: sed -i '$ d' CHANGELOG.md
 
       - name: Update changelog
         uses: test-room-7/action-update-file@v1
         with:
           file-path: CHANGELOG.md
-          commit-msg: Update CHANGELOG
+          commit-msg: Update changelog for mew release
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: Create release
-      #   uses: actions/create-release@latest
-      #   with:
-      #     tag_name: ${{ github.ref }}
-      #     release_name: ${{ github.ref }}
-      #     body: ${{ steps.changelog.outputs.changelog }}
-      #     prerelease: false
-      #     draft: 'true'
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create release
+        uses: actions/create-release@latest
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body: ${{ steps.changelog.outputs.changelog }}
+          prerelease: false
+          draft: 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
