@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Generate changelog
+      - name: Generate changelog only PR
         id: generate
         uses: mikepenz/release-changelog-builder-action@main
         with:
@@ -24,19 +24,44 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update changelog
+      - name: Generate changelog with push
         id: changelog
         uses: ardalanamini/auto-changelog@v1.1.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           exclude: "test, style"
 
+      - name: Create/Update changelog
+        uses: charmixer/auto-changelog-action@v1
+        with:
+          token: ${{ secrets.YOUR_GITHUB_TOKEN }
+
+      - name: Commit files
+        env:
+          CI_USER: ${{ secrets.YOUR_GITHUB_USER }}
+          CI_EMAIL: ${{ secrets.YOUR_GITHUB_EMAIL }}
+        run: |
+          git config --local user.email "$CI_EMAIL"
+          git config --local user.name "$CI_USER"
+          git add CHANGELOG.md && git commit -m 'Updated CHANGELOG.md' && echo "push=true" >> $GITHUB_ENV || echo "No changes to CHANGELOG.md"
+
+      - name: Push changes
+        if: env.push == 'true'
+        env:
+          CI_USER: ${{ secrets.YOUR_GITHUB_USER }}
+          CI_TOKEN: ${{ secrets.YOUR_GITHUB_TOKEN }}
+        run: |
+          git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
 
       - name: testing output
         run: |
           echo ${{ steps.changelog.outputs.changelog }}
           echo "--- SPLIT LINE HERE ---"
           echo ${{ steps.generate.outputs.changelog }}
+
+      # - name: Update changelog
+      #   run: |
+
 
       # - name: Create release
       #   uses: actions/create-release@latest
