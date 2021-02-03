@@ -36,7 +36,6 @@ jobs:
         run: perl -ne '$k++ if /##/; {print if $k<2}' CHANGELOG.md > RELEASE.md
 
       - name: Update version
-        run: echo ::set-output name=VERSION::
         run: sed -i -e "s/__version__.*/__version__ = '${GITHUB_REF#/refs/tags/}'" mysdk/version.py
 
       - name: Create release
