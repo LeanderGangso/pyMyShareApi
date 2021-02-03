@@ -36,9 +36,6 @@ jobs:
         with:
           version: ${{ github.reg }}
 
-      - name: testing
-        run: echo ${{ steps.changelog.outputs. }}
-
       # - name: Create release
       #   uses: actions/create-release@latest
       #   with:
