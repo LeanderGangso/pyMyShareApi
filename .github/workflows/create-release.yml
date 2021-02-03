@@ -36,7 +36,7 @@ jobs:
         run: perl -ne '$k++ if /##/; {print if $k<2}' CHANGELOG.md > RELEASE.md
 
       - name: Update version
-        run: sed -i -e "s/__version__.*/__version__ = ${{ github.ref }}/" mysdk/version.py
+        run: sed -i -e 's/__version__.*/__version__ = ${{ github.ref }}/' mysdk/version.py
 
       - name: Create release
         uses: actions/create-release@latest
