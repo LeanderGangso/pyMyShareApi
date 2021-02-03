@@ -19,11 +19,11 @@ jobs:
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
         with:
-          output: CHANGELOG.md
-          token: ${{ secrets.YOUR_GITHUB_TOKEN }}
+          output: NEW_CHANGELOG.md
+          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Remove from changelog
-        run: sed -i '$ d' CHANGELOG.md
+        run: head -n -4 NEW_CHANGELOG > CHANGELOG.md
 
       - name: Update changelog
         uses: test-room-7/action-update-file@v1
@@ -42,6 +42,6 @@ jobs:
           release_name: ${{ github.ref }}
           body_path: RELEASE.md
           prerelease: false
-          draft: 'true'
+          draft: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
