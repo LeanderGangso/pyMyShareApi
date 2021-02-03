@@ -25,11 +25,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update changelog
-        uses: saadmk11/changelog-ci@v0.7.0
+        uses: ardalanamini/auto-changelog@v1.1.0
         with:
-          changelog_filename: CHANGELOG.md
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+        exclude: "test, style"
+
 
       - name: testing output
         run: |
