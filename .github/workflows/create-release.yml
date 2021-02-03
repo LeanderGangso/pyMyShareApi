@@ -24,17 +24,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: env test
-        run: |
-          echo $NEW_VERSION
-          echo $PRE_VERSION
-          echo $NEW_LOG
-
       - name: Update changelog
         id: changelog
         uses: thomaseizinger/keep-a-changelog-new-release@1.2.0
         with:
-          version: ${{ github.reg }}
+          version: ${{ steps.generate.outputs.toTag }}
 
       # - name: Create release
       #   uses: actions/create-release@latest
@@ -43,6 +37,7 @@ jobs:
       #     release_name: ${{ github.ref }}
       #     body: ${{ steps.generate.outputs.changelog }}
       #     prerelease: ${{ contains(github.ref, '-') }}
+            # prerelease: false
       #     draft: 'true'
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
