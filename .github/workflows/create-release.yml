@@ -24,28 +24,21 @@ jobs:
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate changelog
-        id: changelog
-        uses: ardalanamini/auto-changelog@v1.1.0
+      # - name: Generate changelog
+      #   id: changelog
+      #   uses: ardalanamini/auto-changelog@v1.1.0
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     exclude: "test, style"
+
+      # - name: Get current date
+      #   id: date
+      #   run: echo "name=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: Update changelog file
+        uses: charmixer/auto-changelog-action@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          exclude: "test, style"
-
-      - name: Get current date
-        id: date
-        run: echo "name=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-
-      - name: Edit changelog
-        env:
-          NEW_CONTENT: ${{ steps.changelog.outputs.changelog }}
-          new_tag: ${{ github.ref }}
-        run: |
-          export pre_tag=$(sed -n 3p mysdk/version.py)
-          echo $pre_tag
-          sed -n '1,10' CHANGELOG.md > NEW_CHANGELOG.md
-          echo $NEW_CONTENT >> NEW_CHANGELOG.md
-          sed -n '11,999p' CHANGELOG.md >> NEW_CHANGELOG.md
-          sed -i -e "s/__version__.*/__version__ = $new_tag/" mysdk/version.py
+          output: CHANGELOG.md
 
       - name: Update changelog
         uses: test-room-7/action-update-file@v1
@@ -59,9 +52,8 @@ jobs:
       #   with:
       #     tag_name: ${{ github.ref }}
       #     release_name: ${{ github.ref }}
-      #     body: ${{ steps.generate.outputs.changelog }}
-      #     prerelease: ${{ contains(github.ref, '-') }}
-            # prerelease: false
+      #     body: ${{ steps.changelog.outputs.changelog }}
+      #     prerelease: false
       #     draft: 'true'
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
