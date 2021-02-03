@@ -55,8 +55,9 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
-          body: ${{ steps.changelog.outputs.changelog }}
+          body: 
           prerelease: false
           draft: 'true'
         env:
+          CHANGELOG: $(echo CHANGELOG.md)
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
