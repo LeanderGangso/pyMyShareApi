@@ -46,7 +46,7 @@ auto_run(){
     # echo "[$new_tag]: https://github.com/leandergangso/pymysharesdk/compare/$pre_tag...$github.ref" >> NEW_CHANGELOG.md
 
     # replace old file with new
-    cp NEW_CHANGELOG.md CHANGELOG.md
+    # cp NEW_CHANGELOG.md CHANGELOG.md
 }
 
 # run script
