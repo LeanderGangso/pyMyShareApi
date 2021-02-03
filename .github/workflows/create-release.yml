@@ -19,29 +19,52 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Generate changelog
-        id: Changelog
+        id: generate
         uses: mikepenz/release-changelog-builder-action@main
         with:
-          outputFile: 'CHANGELOG.md'
           configuration: '.github/release_changelog.json'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: Generate new changelog
-      #   id: Changelog
-      #   uses: ardalanamini/auto-changelog@v1.1.0
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Get new tag
+      #   id: newtag
+      #   run: |
+      #     echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+
+      # - name: 'Get previous tag'
+      #   id: previoustag
+      #   uses: "WyriHaximus/github-action-get-previous-tag@v1"
+
+      - name: test
+        run: ls -a && ls -a ../ && ls -a ../../
 
       # - name: Update changelog
+        # env:
+          # NEW_VERSION: ${{ steps.generate.outputs.toTag }}
+          # PRE_VERSION: ${{ steps.generate.outputs.fromTag }}
+        # run: |
+        #   sed -n -e '/Changelog/,/Unreleased\n/1/p' CHANGELOG.md > NEW_CHANGELOG.md 
+        #   echo \ >> NEW_CHANGELOG.md
+
+        #   steps.Changelog.outputs.changelog >> NEW_CHANGELOG.md
+        #   echo \ >> NEW_CHANGELOG.md
+
+        #   sed -n -e '/a/,/b/1/p' CHANGELOG.md >> NEW_CHANGELOG.md
+        #   echo \ >> NEW_CHANGELOG.md
+
+        #   sed "s/v$PRE_VERSION...HEAD/$NEW_VERSION...HEAD/g" CHANGELOG.md > NEW_CHANGELOG.md
+        #   sed "s+<\!-- new release here -->+<\!-- new release here -->\n\[v$NEW_VERSION]: https://github.com/leandergangso/pymysharesdk/compare/v$PRE_VERSION...$NEW_VERSION+g" CHANGELOG.md > NEW_CHANGELOG.md
+
+        #   NEW_CHANGELOG.md > CHANGELOG.md
+        #   rm NEW_CHANGELOG.md
 
       - name: Create release
         uses: actions/create-release@latest
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
-          body: ${{ steps.Changelog.outputs.changelog }}
-          prerelease: ${{ contains(github.ref, 'v?.?.?-**') }}
+          body: ${{ steps.generate.outputs.changelog }}
+          prerelease: ${{ contains(github.ref, v?.?.?-**) }}
           draft: 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
