@@ -35,8 +35,7 @@ jobs:
       - name: testing output
         run: |
           echo ${{ steps.changelog.outputs.changelog }}
-          echo ${{ steps.generate.outputs.toTag }}
-          echo ${{ steps.generate.outputs.fromTag }}
+          echo "--- SPLIT LINE HERE ---"
           echo ${{ steps.generate.outputs.changelog }}
 
       # - name: Create release
