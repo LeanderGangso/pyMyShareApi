@@ -58,6 +58,7 @@ jobs:
 
 
   deploy:
+      needs: release
       if: contains(github.ref, '-') != true
       runs-on: ubuntu-latest
 
