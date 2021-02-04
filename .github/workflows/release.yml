@@ -27,7 +27,7 @@ jobs:
           echo ::set-output name=SOURCE_TAG::$(TAG)
         # run: echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
         env:
-          TAG: awk '{for (I=1;I<NF;I++) if ($I == "__version__") print $(I+2)}' mysdk/version.py
+          TAG: ${{ awk '{for (I=1;I<NF;I++) if ($I == "__version__") print $(I+2)}' mysdk/version.py }}
 
       # need to create new tag for changelog
 
