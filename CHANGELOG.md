@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/LeanderGangso/pyMyShareSDK/tree/HEAD)
+## [v0.0.3](https://github.com/LeanderGangso/pyMyShareSDK/tree/v0.0.3) (2021-02-04)
 
-[Full Changelog](https://github.com/LeanderGangso/pyMyShareSDK/compare/v0.0.1...HEAD)
+[Full Changelog](https://github.com/LeanderGangso/pyMyShareSDK/compare/v0.0.1...v0.0.3)
 
 **Merged pull requests:**
 
