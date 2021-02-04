@@ -1,4 +1,4 @@
-# Versions should comply with PEP400.
-# The version is updated automatically!
-# This line is parsed in setup.py:
-__version__ = 'v0.0.4'
+# Versions should comply with PEP400
+# Update to create a new release
+# Next line is parsed in setup.py
+__version__ = 'v0.0.3'
