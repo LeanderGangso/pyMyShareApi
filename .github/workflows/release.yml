@@ -8,8 +8,10 @@ name: Release and deploy
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - master
+    paths:
+      - 'mysdk/version.py'
 
 jobs:
   release:
