@@ -27,7 +27,9 @@ jobs:
           echo ::set-output name=SOURCE_TAG::$(TAG)
         # run: echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
         env:
-          TAG: $(awk '{for (I=1;I<NF;I++) if ($I == "__version__") print $(I+2)}' mysdk/version.py)
+          TAG: awk '{for (I=1;I<NF;I++) if ($I == "__version__") print $(I+2)}' mysdk/version.py
+
+      # need to create new tag for changelog
 
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
@@ -60,20 +62,20 @@ jobs:
         env:
           TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
 
-      - name: Create release
-        uses: actions/create-release@v1
-        with:
-          tag_name: env.TAG
-          release_name: env.TAG
-          # tag_name: ${{ github.ref }}
-          # release_name: ${{ github.ref }}
-          body_path: RELEASE.md
-          prerelease: ${{ contains(env.TAG, '-') }}
-          # prerelease: ${{ contains(github.ref, '-') }}
-          draft: false # true on testing
-        env:
-          TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Create release
+      #   uses: actions/create-release@v1
+      #   with:
+      #     tag_name: env.TAG
+      #     release_name: env.TAG
+      #     # tag_name: ${{ github.ref }}
+      #     # release_name: ${{ github.ref }}
+      #     body_path: RELEASE.md
+      #     prerelease: ${{ contains(env.TAG, '-') }}
+      #     # prerelease: ${{ contains(github.ref, '-') }}
+      #     draft: false # true on testing
+      #   env:
+      #     TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
   # deploy:
