@@ -89,7 +89,7 @@ jobs:
             echo ::set-output name=SOURCE_TAG::$(sed -n '/__version__/,//p' mysdk/version.py | awk -F "'" '{print $2}')
 
         - name: Check version & setup python
-          if: ${{ contains(env.TAG, '-') }}
+          if: contains(env.TAG, '-') != true
           uses: actions/setup-python@v2
           with:
             python-version: '3.8'
