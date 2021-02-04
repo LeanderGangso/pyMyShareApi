@@ -1,11 +1,15 @@
-# This workflow will create new release with given tag, when a tag is pushed,
-# will also auto generate changelog for the new release body and update CHAGELOG.md.
-# Lastly it will deploy a new version to PyPI if the release was successfull.
+# This workflow will create a new release with the pushed tag, it will also
+# auto generate a changelog for the release body and update CHAGELOG.md.
+
+# Lastly it will deploy a new version to PyPI if the release was successfull,
+# and the tag != (alpha, beta)
 
 name: Release and deploy
 
 on:
   push:
+    branches:
+      - master
     tags:
       - 'v*'
 
@@ -24,6 +28,7 @@ jobs:
         uses: charmixer/auto-changelog-action@v1
         with:
           output: NEW_CHANGELOG.md
+          exclude_tags: 'test,'
           token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Remove from changelog
