@@ -50,8 +50,8 @@ Follow along to make a one-off code change.
 1. Create the branch like so:
 
     ```bash
-    git fetch upstream
     git checkout master
+    git fetch upstream
     git merge upstream/master
     git checkout -b branch-name
     ```
@@ -62,7 +62,7 @@ Follow along to make a one-off code change.
     to understand why the changes were made.
 
     Add yourself to the [AUTHORS.md](https://github.com/LeanderGangso/pyMyShareSDK/tree/master/.github/AUTHORS.md) file in an alphabetical fashion.
-    - Located on you local machine @ `.../pyMyShareSDK/.github/AUTHORS.md`.
+    - Located @ `.../pyMyShareSDK/.github/AUTHORS.md`
 
     Test you changes first (run in the `../pyMyShareSDK` directory):
 
@@ -115,9 +115,8 @@ Follow along to make a one-off code change.
 
     ```bash
     git checkout master
-    git branch -D branch-name
-    git push origin --delete branch-name
-    git pull upstream
+    git branch -d branch-name
+    git push origin -d branch-name
     ```
 
 1. Thank you, you have contributed to `pyMyShareSDK`!
