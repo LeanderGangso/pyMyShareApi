@@ -1,6 +1,6 @@
 from setuptools import setup
 
-base_url = 'https://github.com/LeanderGangso/pyMyShareAPI'
+base_url = 'https://github.com/LeanderGangso/pyMyShareSDK'
 
 requirements = [
     'requests',
