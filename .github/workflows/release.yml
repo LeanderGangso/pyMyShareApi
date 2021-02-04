@@ -1,5 +1,6 @@
 # This workflow will create new release with given tag, when a tag is pushed,
 # will also auto generate changelog for the new release body and update CHAGELOG.md.
+# Lastly it will deploy a new version to PyPI if the release was successfull.
 
 name: Release and deploy
 
