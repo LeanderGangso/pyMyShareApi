@@ -8,10 +8,10 @@ name: Release and deploy
 
 on:
   push:
-    branches:
-      - master
     tags:
       - 'v*'
+    branches:
+      - master
 
 jobs:
   release:
