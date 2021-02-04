@@ -4,9 +4,6 @@
 name: Upload to PyPI
 
 on:
-  workflow_run:
-    workflows:
-      - 'Create Release'
   release:
     types: 
       - released
