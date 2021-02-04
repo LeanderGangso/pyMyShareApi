@@ -34,7 +34,7 @@ jobs:
             github.git.createRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              ref: "refs/tags/$TAG",
+              ref: $TAG,
               sha: context.sha
             })
         env:
@@ -43,7 +43,7 @@ jobs:
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
         with:
-          output: ''
+          output:
           # output: NEW_CHANGELOG.md
           exclude_tags: 'test,'
           token: ${{ secrets.GITHUB_TOKEN }}
