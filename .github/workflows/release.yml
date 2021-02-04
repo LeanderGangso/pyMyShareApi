@@ -101,12 +101,15 @@ jobs:
           run: |
             python -m pip install --upgrade pip
             pip install setuptools wheel twine
+          env:
+            TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
 
-        # - name: Build and publish
-        #   if: contains(env.TAG, '-') != true
-        #   env:
-        #     TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-        #     TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-        #   run: |
-        #     python setup.py sdist bdist_wheel
-        #     twine upload dist/*
+        - name: Build and publish
+          if: contains(env.TAG, '-') != true
+          env:
+              TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
+            TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+            TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+          run: |
+            python setup.py sdist bdist_wheel
+            twine upload dist/*
