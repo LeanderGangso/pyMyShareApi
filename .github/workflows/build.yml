@@ -9,8 +9,6 @@ on:
     paths:
       - 'mysdk/**'
       - 'tests/**'
-    paths-ignore:
-      - 'mysdk/version.py'
     tags-ignore:
       - '**'
   pull_request:
