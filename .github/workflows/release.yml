@@ -52,7 +52,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Get release changelog
-        run: echo "this is a test: $TAG"
+        run: echo "this is a test $TAG"
         run: perl -ne '$k++ if /##/; {print if $k<2}' CHANGELOG.md > RELEASE.md
         env:
           TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
