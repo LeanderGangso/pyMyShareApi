@@ -22,7 +22,7 @@ jobs:
 
       - name: Get tag version
         id: tag
-        run: echo ::set-output name=SOURCE_TAG::$TAG
+        run: echo ::set-output name=SOURCE_TAG::env.TAG
         # run: echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
         env:
           TAG: $(awk '{for (I=1;I<NF;I++) if ($I == "__version__") print $(I+2)}' mysdk/version.py)
@@ -53,7 +53,7 @@ jobs:
       
       - name: Get release changelog
         run: |
-          echo "this is a test $TAG"
+          echo  "new version $TAG"
           perl -ne '$k++ if /##/; {print if $k<2}' CHANGELOG.md > RELEASE.md
         env:
           TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
@@ -61,8 +61,8 @@ jobs:
       - name: Create release
         uses: actions/create-release@v1
         with:
-          tag_name: $TAG
-          release_name: $TAG
+          tag_name: env.TAG
+          release_name: env.TAG
           # tag_name: ${{ github.ref }}
           # release_name: ${{ github.ref }}
           body_path: RELEASE.md
