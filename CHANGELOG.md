@@ -1,8 +1,8 @@
 # Changelog
 
-## ['v1.0.3'](https://github.com/LeanderGangso/pyMyShareSDK/tree/'v1.0.3') (2021-02-04)
+## [v1.1.1](https://github.com/LeanderGangso/pyMyShareSDK/tree/v1.1.1) (2021-02-04)
 
-[Full Changelog](https://github.com/LeanderGangso/pyMyShareSDK/compare/v0.0.3...'v1.0.3')
+[Full Changelog](https://github.com/LeanderGangso/pyMyShareSDK/compare/v0.0.3...v1.1.1)
 
 ## [v0.0.3](https://github.com/LeanderGangso/pyMyShareSDK/tree/v0.0.3) (2021-02-04)
 
