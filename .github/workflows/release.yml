@@ -8,12 +8,11 @@ name: Release and deploy
 
 on:
   push:
-    branches:
-      - 'refs/tags/v*'
+    tags:
+      - 'v*'
 
 jobs:
   release:
-    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
 
     steps:
