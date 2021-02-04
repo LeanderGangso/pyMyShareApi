@@ -8,8 +8,8 @@ name: Release and deploy
 
 on:
   push:
-    # branches:
-      # - master
+    branches:
+      - master
     paths:
       - 'mysdk/version.py'
 
@@ -48,10 +48,10 @@ jobs:
       - name: Remove comment
         run: head -n -4 NEW_CHANGELOG.md > CHANGELOG.md
 
-      - name: Update version
-        run: sed -i -e "s/__version__.*/__version__ = '$TAG'/" mysdk/version.py
-        env:
-          TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
+      # - name: Update version
+      #   run: sed -i -e "s/__version__.*/__version__ = '$TAG'/" mysdk/version.py
+      #   env:
+      #     TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
 
       - name: Update changelog
         uses: test-room-7/action-update-file@v1
