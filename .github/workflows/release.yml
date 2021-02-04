@@ -34,7 +34,7 @@ jobs:
             github.git.createRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              ref: $TAG,
+              ref: env.TAG,
               sha: context.sha
             })
         env:
