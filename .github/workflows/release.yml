@@ -88,16 +88,13 @@ jobs:
           run: |
             echo ::set-output name=SOURCE_TAG::$(sed -n '/__version__/,//p' mysdk/version.py | awk -F "'" '{print $2}')
 
-        - name: Check version
+        - name: Check version & setup python
           if: ${{ contains(env.TAG, '-') }}
-          env:
-            TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
-
-        - name: Set up Python
-          if: success()
           uses: actions/setup-python@v2
           with:
             python-version: '3.8'
+          env:
+            TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
 
         - name: Install dependencies
           if: success()
