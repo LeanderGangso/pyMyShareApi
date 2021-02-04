@@ -48,8 +48,8 @@ jobs:
           exclude_tags: 'test,'
           token: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Remove from changelog
-        run: head -n -4 NEW_CHANGELOG.md > CHANGELOG.md
+      # - name: Remove from changelog
+        # run: head -n -4 NEW_CHANGELOG.md > CHANGELOG.md
 
       # - name: Update version
       #   run: sed -i -e "s/__version__.*/__version__ = '$TAG'/" mysdk/version.py
