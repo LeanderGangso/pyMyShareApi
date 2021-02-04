@@ -66,8 +66,8 @@ jobs:
       - name: Create release
         uses: actions/create-release@v1
         with:
-          tag_name: env.TAG
-          release_name: env.TAG
+          tag_name: ${{ env.TAG }}
+          release_name: ${{ env.TAG }}
           body_path: RELEASE.md
           prerelease: ${{ contains(env.TAG, '-') }}
           draft: false # true on testing
@@ -97,13 +97,13 @@ jobs:
             TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
 
         - name: Install dependencies
-          if: success()
+          if: contains(env.TAG, '-') != true
           run: |
             python -m pip install --upgrade pip
             pip install setuptools wheel twine
 
         # - name: Build and publish
-        #   if: success()
+        #   if: contains(env.TAG, '-') != true
         #   env:
         #     TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         #     TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
