@@ -107,7 +107,7 @@ jobs:
         - name: Build and publish
           if: contains(env.TAG, '-') != true
           env:
-              TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
+            TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
             TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
             TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
           run: |
