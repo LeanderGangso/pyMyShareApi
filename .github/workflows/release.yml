@@ -26,22 +26,25 @@ jobs:
           echo ::set-output name=SOURCE_TAG::$(awk '{for (I=1;I<NF;I++) if ($I == "__version__") print $(I+2)}' mysdk/version.py)
         # run: echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
 
-      # - name: Create tag
-      #   uses: actions/github-script@v3
-      #   with:
-      #     github-token: ${{ github.token }}
-      #     script: |
-      #       github.git.createRef({
-      #         owner: context.repo.owner,
-      #         repo: context.repo.repo,
-      #         ref: "refs/tags/tagname",
-      #         sha: context.sha
-      #       })
+      - name: Create tag
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ github.token }}
+          script: |
+            github.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: "refs/tags/$TAG",
+              sha: context.sha
+            })
+        env:
+          TAG: ${{ steps.tag.outputs.SOURCE_TAG }}
 
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
         with:
-          output: NEW_CHANGELOG.md
+          output: ''
+          # output: NEW_CHANGELOG.md
           exclude_tags: 'test,'
           token: ${{ secrets.GITHUB_TOKEN }}
       
