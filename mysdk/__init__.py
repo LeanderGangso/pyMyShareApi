@@ -14,6 +14,7 @@ logger.setLevel(logging.ERROR)
 
 from mysdk import apihelper
 
+
 """
 Module : mysdk
 """
@@ -28,10 +29,10 @@ class MySDK:
         delete_job
     """
 
+
     def __init__(self, token) -> None:
         """
-        :param token: MyShare given token
-        :param test: what do you like
+        :param token: MyShare token
         """
 
         self.token = token

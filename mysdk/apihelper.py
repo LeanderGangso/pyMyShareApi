@@ -1,10 +1,6 @@
+import json
 import time
 from datetime import datetime
-
-try:
-    import ujson as json
-except ImportError:
-    import json
 
 import requests
 # from requests_oauthlib import OAuth1
@@ -17,6 +13,7 @@ def __create_auth():
     """A private method to create the OAuth1 object, if necessary."""
     
     pass
+
 
 def _make_request(url, method='get', data=None):
     """

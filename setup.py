@@ -9,6 +9,8 @@ requirements = [
 requirements_dev = [
     'pytest==6.2.2',
     'check-manifest==0.46',
+    'twine==3.3.0',
+    'setuptools==41.2.0'
 ]
 
 exec(open('mysdk/version.py', 'r').read()) # get __version__ variable
